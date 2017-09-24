@@ -135,7 +135,7 @@ Transform:
   m_GameObject: {fileID: 618025970}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 4.5}
-  m_LocalScale: {x: 55, y: 25, z: 1}
+  m_LocalScale: {x: 64, y: 24, z: 1}
   m_Children: []
   m_Father: {fileID: 1996523335}
   m_RootOrder: 0
@@ -401,6 +401,8 @@ GameObject:
   - component: {fileID: 2010923434}
   - component: {fileID: 2010923435}
   - component: {fileID: 2010923433}
+  - component: {fileID: 2010923436}
+  - component: {fileID: 2010923437}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -538,6 +540,34 @@ MonoBehaviour:
   laserPrefab2: {fileID: 1993149098620072, guid: 0de534fdcdf91e1498535b802976d259,
     type: 2}
   fireDelay: 0.1
+--- !u!95 &2010923436
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2010923428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0a88f73784aeaeb4d8cfb07294786b31, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &2010923437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2010923428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a56f1290323dc49bf8612b7829660b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2080930542
 Prefab:
   m_ObjectHideFlags: 0
