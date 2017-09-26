@@ -1,0 +1,1282 @@
+fileFormatVersion: 2
+guid: 6201070df2c94ff41b9cbc9918e18a56
+timeCreated: 1506468019
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: beams_0
+    21300002: beams_1
+    21300004: beams_2
+    21300006: beams_3
+    21300008: beams_4
+    21300010: beams_5
+    21300012: beams_6
+    21300014: beams_7
+    21300016: beams_8
+    21300018: beams_9
+    21300020: beams_10
+    21300022: beams_11
+    21300024: beams_12
+    21300026: beams_13
+    21300028: beams_14
+    21300030: beams_15
+    21300032: beams_16
+    21300034: beams_17
+    21300036: beams_18
+    21300038: beams_19
+    21300040: beams_20
+    21300042: beams_21
+    21300044: beams_22
+    21300046: beams_23
+    21300048: beams_24
+    21300050: beams_25
+    21300052: beams_26
+    21300054: beams_27
+    21300056: beams_28
+    21300058: beams_29
+    21300060: beams_30
+    21300062: beams_31
+    21300064: beams_32
+    21300066: beams_33
+    21300068: beams_34
+    21300070: beams_35
+    21300072: beams_36
+    21300074: beams_37
+    21300076: beams_38
+    21300078: beams_39
+    21300080: beams_40
+    21300082: beams_41
+    21300084: beams_42
+    21300086: beams_43
+    21300088: beams_44
+    21300090: beams_45
+    21300092: beams_46
+    21300094: beams_47
+    21300096: beams_48
+    21300098: beams_49
+    21300100: beams_50
+    21300102: beams_51
+    21300104: beams_52
+    21300106: beams_53
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: beams_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 426
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 425
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_2
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 442
+        width: 23
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_3
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 415
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_4
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 410
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_5
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 421
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_6
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 414
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_7
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 345
+        width: 8
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_8
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 357
+        width: 49
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_9
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 349
+        width: 7
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_10
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 387
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_11
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 397
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_12
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 382
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_13
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 392
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_14
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 386
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_15
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 396
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_16
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 300
+        width: 71
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_17
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 353
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_18
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 360
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_19
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 348
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_20
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 355
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_21
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 352
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_22
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 359
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_23
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 300
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_24
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 311
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_25
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 305
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_26
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 316
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_27
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 307
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_28
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 318
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_29
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 253
+        width: 56
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_30
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 272
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_31
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 282
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_32
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 277
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_33
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 287
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_34
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 279
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_35
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 289
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_36
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 238
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_37
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 245
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_38
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 243
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_39
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 250
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_40
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 245
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_41
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 252
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_42
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 235
+        width: 95
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_43
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 151
+        width: 48
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_44
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 146
+        width: 47
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_45
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 226
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 161
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_47
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 53
+        width: 60
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_48
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 156
+        width: 41
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_49
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 67
+        width: 39
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_50
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 40
+        width: 54
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_51
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 35
+        width: 62
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_52
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 0
+        width: 43
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beams_53
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 155
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape:
+    - - {x: -8, y: -100}
+      - {x: -21, y: -100}
+      - {x: -23, y: -113}
+      - {x: -23, y: -156}
+      - {x: -16, y: -163}
+      - {x: -13, y: -165}
+      - {x: -8, y: -165}
+      - {x: 1, y: -151}
+      - {x: 1, y: -111}
+    - - {x: -74, y: -120}
+      - {x: -80, y: -106}
+      - {x: -84, y: -106}
+      - {x: -88, y: -108}
+      - {x: -94, y: -115}
+      - {x: -94, y: -149}
+      - {x: -91, y: -163}
+      - {x: -80, y: -163}
+      - {x: -72, y: -147}
+      - {x: -72, y: -128}
+    - - {x: -198, y: -100}
+      - {x: -202, y: -95}
+      - {x: -206, y: -95}
+      - {x: -210, y: -100}
+      - {x: -210, y: -142}
+      - {x: -206, y: -147}
+      - {x: -202, y: -147}
+      - {x: -198, y: -142}
+    - - {x: -140, y: -110}
+      - {x: -146, y: -100}
+      - {x: -150, y: -100}
+      - {x: -153, y: -101}
+      - {x: -157, y: -109}
+      - {x: -157, y: -131}
+      - {x: -155, y: -143}
+      - {x: -146, y: -143}
+      - {x: -141, y: -131}
+      - {x: -140, y: -129}
+    - - {x: -178, y: -54}
+      - {x: -177, y: -56}
+      - {x: -162, y: -56}
+      - {x: -158, y: -54}
+      - {x: -158, y: -28}
+      - {x: -162, y: -16}
+      - {x: -172, y: -16}
+      - {x: -178, y: -29}
+    - - {x: 3, y: -4}
+      - {x: -4, y: -19}
+      - {x: -4, y: -41}
+      - {x: -3, y: -45}
+      - {x: 3, y: -55}
+      - {x: 8, y: -55}
+      - {x: 10, y: -54}
+      - {x: 15, y: -46}
+      - {x: 15, y: -19}
+      - {x: 12, y: -4}
+    - - {x: -229, y: -24}
+      - {x: -234, y: -28}
+      - {x: -235, y: -35}
+      - {x: -235, y: -49}
+      - {x: -230, y: -52}
+      - {x: -222, y: -52}
+      - {x: -222, y: -34}
+      - {x: -225, y: -24}
+    - - {x: -67, y: -1}
+      - {x: -74, y: -4}
+      - {x: -74, y: -25}
+      - {x: -65, y: -50}
+      - {x: -57, y: -50}
+      - {x: -49, y: -20}
+      - {x: -49, y: -6}
+      - {x: -53, y: -1}
+    - - {x: -118, y: -5}
+      - {x: -118, y: -22}
+      - {x: -114, y: -45}
+      - {x: -110, y: -47}
+      - {x: -103, y: -47}
+      - {x: -96, y: -31}
+      - {x: -96, y: -10}
+      - {x: -98, y: -5}
+    - - {x: -239, y: 25}
+      - {x: -238, y: 20}
+      - {x: -224, y: 20}
+      - {x: -224, y: 32}
+      - {x: -226, y: 37}
+      - {x: -235, y: 37}
+      - {x: -239, y: 33}
+    - - {x: -154, y: 42}
+      - {x: -158, y: 39}
+      - {x: -158, y: 30}
+      - {x: -156, y: 25}
+      - {x: -146, y: 25}
+      - {x: -143, y: 30}
+      - {x: -143, y: 37}
+      - {x: -147, y: 42}
+    - - {x: -204, y: 50}
+      - {x: -204, y: 27}
+      - {x: -194, y: 27}
+      - {x: -194, y: 48}
+      - {x: -195, y: 50}
+    - - {x: -61, y: 44}
+      - {x: -68, y: 44}
+      - {x: -72, y: 41}
+      - {x: -72, y: 32}
+      - {x: -70, y: 27}
+      - {x: -62, y: 27}
+      - {x: -58, y: 31}
+      - {x: -57, y: 34}
+      - {x: -57, y: 38}
+    - - {x: -121, y: 55}
+      - {x: -123, y: 51}
+      - {x: -123, y: 39}
+      - {x: -122, y: 35}
+      - {x: -120, y: 32}
+      - {x: -117, y: 32}
+      - {x: -113, y: 34}
+      - {x: -113, y: 52}
+      - {x: -117, y: 55}
+    - - {x: -35, y: 57}
+      - {x: -37, y: 53}
+      - {x: -37, y: 41}
+      - {x: -36, y: 37}
+      - {x: -34, y: 34}
+      - {x: -31, y: 34}
+      - {x: -27, y: 36}
+      - {x: -27, y: 54}
+      - {x: -31, y: 57}
+    - - {x: -234, y: 64}
+      - {x: -235, y: 61}
+      - {x: -235, y: 58}
+      - {x: -232, y: 54}
+      - {x: -229, y: 55}
+      - {x: -228, y: 58}
+      - {x: -228, y: 61}
+      - {x: -231, y: 65}
+    - - {x: -153, y: 69}
+      - {x: -154, y: 66}
+      - {x: -154, y: 63}
+      - {x: -151, y: 59}
+      - {x: -148, y: 60}
+      - {x: -147, y: 63}
+      - {x: -147, y: 66}
+      - {x: -150, y: 70}
+    - - {x: -67, y: 71}
+      - {x: -68, y: 68}
+      - {x: -68, y: 64}
+      - {x: -65, y: 61}
+      - {x: -62, y: 62}
+      - {x: -61, y: 65}
+      - {x: -61, y: 69}
+      - {x: -64, y: 72}
+    - - {x: 24, y: 120}
+      - {x: 6, y: 120}
+      - {x: 1, y: 114}
+      - {x: 1, y: 94}
+      - {x: 9, y: 65}
+      - {x: 13, y: 63}
+      - {x: 20, y: 63}
+      - {x: 24, y: 70}
+      - {x: 30, y: 98}
+      - {x: 30, y: 114}
+    - - {x: -202, y: 78}
+      - {x: -204, y: 77}
+      - {x: -204, y: 68}
+      - {x: -203, y: 64}
+      - {x: -197, y: 64}
+      - {x: -194, y: 66}
+      - {x: -194, y: 73}
+      - {x: -196, y: 78}
+    - - {x: -121, y: 83}
+      - {x: -123, y: 82}
+      - {x: -123, y: 73}
+      - {x: -122, y: 69}
+      - {x: -116, y: 69}
+      - {x: -113, y: 71}
+      - {x: -113, y: 78}
+      - {x: -115, y: 83}
+    - - {x: -35, y: 85}
+      - {x: -37, y: 84}
+      - {x: -37, y: 75}
+      - {x: -36, y: 71}
+      - {x: -30, y: 71}
+      - {x: -27, y: 73}
+      - {x: -27, y: 80}
+      - {x: -29, y: 85}
+    - - {x: -236, y: 98}
+      - {x: -239, y: 92}
+      - {x: -239, y: 86}
+      - {x: -236, y: 82}
+      - {x: -228, y: 82}
+      - {x: -225, y: 84}
+      - {x: -225, y: 94}
+      - {x: -227, y: 98}
+    - - {x: -155, y: 103}
+      - {x: -158, y: 97}
+      - {x: -158, y: 91}
+      - {x: -155, y: 87}
+      - {x: -147, y: 87}
+      - {x: -144, y: 89}
+      - {x: -144, y: 99}
+      - {x: -146, y: 103}
+    - - {x: -71, y: 105}
+      - {x: -72, y: 104}
+      - {x: -72, y: 95}
+      - {x: -71, y: 89}
+      - {x: -61, y: 89}
+      - {x: -58, y: 93}
+      - {x: -58, y: 103}
+      - {x: -63, y: 105}
+    - - {x: -204, y: 105}
+      - {x: -206, y: 103}
+      - {x: -206, y: 96}
+      - {x: -204, y: 92}
+      - {x: -197, y: 92}
+      - {x: -193, y: 93}
+      - {x: -193, y: 101}
+      - {x: -198, y: 105}
+    - - {x: -123, y: 110}
+      - {x: -125, y: 107}
+      - {x: -125, y: 101}
+      - {x: -123, y: 97}
+      - {x: -117, y: 97}
+      - {x: -112, y: 98}
+      - {x: -112, y: 106}
+      - {x: -117, y: 110}
+    - - {x: -39, y: 101}
+      - {x: -37, y: 99}
+      - {x: -31, y: 99}
+      - {x: -26, y: 100}
+      - {x: -26, y: 106}
+      - {x: -28, y: 112}
+      - {x: -39, y: 112}
+    - - {x: 88, y: 177}
+      - {x: 82, y: 177}
+      - {x: 79, y: 174}
+      - {x: 71, y: 156}
+      - {x: 71, y: 124}
+      - {x: 80, y: 103}
+      - {x: 86, y: 103}
+      - {x: 90, y: 106}
+      - {x: 98, y: 125}
+      - {x: 98, y: 159}
+    - - {x: -155, y: 147}
+      - {x: -159, y: 144}
+      - {x: -159, y: 135}
+      - {x: -157, y: 130}
+      - {x: -147, y: 130}
+      - {x: -144, y: 135}
+      - {x: -144, y: 142}
+      - {x: -148, y: 147}
+    - - {x: -74, y: 136}
+      - {x: -73, y: 134}
+      - {x: -59, y: 134}
+      - {x: -59, y: 147}
+      - {x: -60, y: 151}
+      - {x: -70, y: 151}
+      - {x: -74, y: 148}
+    - - {x: -229, y: 152}
+      - {x: -234, y: 152}
+      - {x: -238, y: 149}
+      - {x: -238, y: 138}
+      - {x: -234, y: 135}
+      - {x: -228, y: 135}
+      - {x: -224, y: 138}
+      - {x: -223, y: 144}
+      - {x: -223, y: 149}
+    - - {x: -122, y: 160}
+      - {x: -124, y: 156}
+      - {x: -124, y: 144}
+      - {x: -123, y: 140}
+      - {x: -121, y: 137}
+      - {x: -118, y: 137}
+      - {x: -114, y: 139}
+      - {x: -114, y: 157}
+      - {x: -118, y: 160}
+    - - {x: -33, y: 164}
+      - {x: -37, y: 164}
+      - {x: -39, y: 160}
+      - {x: -39, y: 143}
+      - {x: -34, y: 141}
+      - {x: -31, y: 141}
+      - {x: -29, y: 145}
+      - {x: -29, y: 161}
+    - - {x: -203, y: 165}
+      - {x: -203, y: 145}
+      - {x: -198, y: 142}
+      - {x: -197, y: 142}
+      - {x: -193, y: 143}
+      - {x: -193, y: 162}
+      - {x: -194, y: 165}
+    - - {x: 1, y: 186}
+      - {x: 5, y: 163}
+      - {x: 28, y: 163}
+      - {x: 28, y: 209}
+      - {x: 3, y: 209}
+      - {x: 1, y: 208}
+    - - {x: -154, y: 174}
+      - {x: -155, y: 171}
+      - {x: -155, y: 168}
+      - {x: -152, y: 164}
+      - {x: -149, y: 165}
+      - {x: -148, y: 168}
+      - {x: -148, y: 171}
+      - {x: -151, y: 175}
+    - - {x: -69, y: 178}
+      - {x: -70, y: 175}
+      - {x: -70, y: 171}
+      - {x: -67, y: 168}
+      - {x: -64, y: 169}
+      - {x: -63, y: 172}
+      - {x: -63, y: 176}
+      - {x: -66, y: 179}
+    - - {x: -233, y: 179}
+      - {x: -234, y: 176}
+      - {x: -234, y: 173}
+      - {x: -231, y: 169}
+      - {x: -228, y: 170}
+      - {x: -227, y: 173}
+      - {x: -227, y: 176}
+      - {x: -230, y: 180}
+    - - {x: -122, y: 188}
+      - {x: -124, y: 187}
+      - {x: -124, y: 178}
+      - {x: -123, y: 174}
+      - {x: -117, y: 174}
+      - {x: -114, y: 176}
+      - {x: -114, y: 183}
+      - {x: -116, y: 188}
+    - - {x: -37, y: 192}
+      - {x: -39, y: 191}
+      - {x: -39, y: 182}
+      - {x: -38, y: 178}
+      - {x: -32, y: 178}
+      - {x: -29, y: 180}
+      - {x: -29, y: 187}
+      - {x: -31, y: 192}
+    - - {x: -201, y: 193}
+      - {x: -203, y: 192}
+      - {x: -203, y: 183}
+      - {x: -202, y: 179}
+      - {x: -196, y: 179}
+      - {x: -193, y: 181}
+      - {x: -193, y: 188}
+      - {x: -195, y: 193}
+    - - {x: -156, y: 208}
+      - {x: -159, y: 202}
+      - {x: -159, y: 196}
+      - {x: -156, y: 192}
+      - {x: -148, y: 192}
+      - {x: -145, y: 194}
+      - {x: -145, y: 204}
+      - {x: -147, y: 208}
+    - - {x: -73, y: 212}
+      - {x: -74, y: 211}
+      - {x: -74, y: 202}
+      - {x: -73, y: 196}
+      - {x: -63, y: 196}
+      - {x: -60, y: 200}
+      - {x: -60, y: 210}
+      - {x: -65, y: 212}
+    - - {x: -235, y: 213}
+      - {x: -238, y: 207}
+      - {x: -238, y: 201}
+      - {x: -235, y: 197}
+      - {x: -227, y: 197}
+      - {x: -224, y: 199}
+      - {x: -224, y: 209}
+      - {x: -226, y: 213}
+    - - {x: -125, y: 215}
+      - {x: -126, y: 214}
+      - {x: -126, y: 205}
+      - {x: -125, y: 202}
+      - {x: -118, y: 202}
+      - {x: -113, y: 204}
+      - {x: -113, y: 211}
+      - {x: -118, y: 215}
+    - - {x: -41, y: 208}
+      - {x: -39, y: 206}
+      - {x: -33, y: 206}
+      - {x: -28, y: 207}
+      - {x: -28, y: 213}
+      - {x: -30, y: 219}
+      - {x: -41, y: 219}
+    - - {x: -203, y: 220}
+      - {x: -205, y: 218}
+      - {x: -205, y: 211}
+      - {x: -203, y: 207}
+      - {x: -196, y: 207}
+      - {x: -192, y: 208}
+      - {x: -192, y: 216}
+      - {x: -197, y: 220}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

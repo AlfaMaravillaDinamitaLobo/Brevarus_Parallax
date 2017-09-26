@@ -580,7 +580,7 @@ MonoBehaviour:
     type: 2}
   laserPrefab2: {fileID: 1993149098620072, guid: 0de534fdcdf91e1498535b802976d259,
     type: 2}
-  fireDelay: 0.1
+  fireDelay: 0.15
 --- !u!95 &2010923436
 Animator:
   serializedVersion: 3
