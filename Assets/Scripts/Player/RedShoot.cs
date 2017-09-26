@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShooting : MonoBehaviour {
+public class RedShoot : MonoBehaviour {
 
     public GameObject laserPrefab1;
     public GameObject laserPrefab2;
