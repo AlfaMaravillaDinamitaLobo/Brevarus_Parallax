@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class RedShoot : MonoBehaviour {
 
-    public GameObject laserPrefab1;
-    public GameObject laserPrefab2;
+	public GameObject laserPrefab1;
+	public GameObject laserPrefab2;
+	public GameObject specialPrefab;
     public float fireDelay = 0.25f;
-    float cooldownTimer = 0;
+
+    private float cooldownTimer = 0;
+	private GameObject specialShoot = null;
 
 	void Update () {
         cooldownTimer -= Time.deltaTime;
@@ -22,5 +25,13 @@ public class RedShoot : MonoBehaviour {
             Instantiate(laserPrefab1, transform.position + offset1, transform.rotation);
             Instantiate(laserPrefab2, transform.position + offset2, transform.rotation);
         }
+
+		if (Input.GetKey (KeyCode.LeftShift) && cooldownTimer <= 0/*La segunda condicion seria tener 100% deenergia cargada*/) {
+			cooldownTimer = fireDelay;
+			specialShoot = Instantiate(specialPrefab, transform.position, transform.rotation);
+
+			specialShoot.transform.position = transform.position;
+			Physics2D.IgnoreLayerCollision (8, 11);
+		}
 	}
 }
