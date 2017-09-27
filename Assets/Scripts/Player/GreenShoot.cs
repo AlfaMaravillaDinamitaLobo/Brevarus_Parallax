@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class GreenShoot : MonoBehaviour {
 
-	public GameObject shieldPrefab;
+    public AudioClip soundClip;
+    public AudioSource soundEffect;
+    public GameObject shieldPrefab;
 	public float fireDelay = 0.25f;
 
 	private float cooldownTimer = 0;
 	private GameObject shield = null;
 
-	void Update () {
+    private void Start()
+    {
+        soundEffect.clip = soundClip;
+    }
+
+    void Update () {
 		cooldownTimer -= Time.deltaTime;
 
 		if(Input.GetButton("Fire1") && cooldownTimer <= 0){
 			cooldownTimer = fireDelay;
 			shield = Instantiate(shieldPrefab, transform.position, transform.rotation);
-
-			Animator animacion = shield.GetComponent<Animator> ();
+            soundEffect.Play();
+            Animator animacion = shield.GetComponent<Animator> ();
 			animacion.SetBool ("greenNormal", true);
 			animacion.SetBool ("greenSpecial", false);
 		}
