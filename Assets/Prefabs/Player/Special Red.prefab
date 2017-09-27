@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4475719458496634}
   - component: {fileID: 95508427144279082}
+  - component: {fileID: 114447719159969070}
   m_Layer: 11
   m_Name: Special Red
   m_TagString: Untagged
@@ -609,6 +610,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114447719159969070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331346215888066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c22fbabe011ecd419d20a220f61a961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 2
 --- !u!212 &212211344856930914
 SpriteRenderer:
   m_ObjectHideFlags: 1
