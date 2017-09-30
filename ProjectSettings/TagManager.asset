@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - GreenShot
-  - RedShot
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -18,11 +16,7 @@ TagManager:
   - Player
   - Enemy
   - Invulnerable
-<<<<<<< HEAD
-  - GreenShot
-=======
   - Special
->>>>>>> disparoEnchetado
   - 
   - 
   - 
