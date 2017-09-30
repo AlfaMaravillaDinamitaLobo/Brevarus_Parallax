@@ -7,7 +7,7 @@ public class GreenShoot : MonoBehaviour {
     public AudioClip soundClip;
     public AudioSource soundEffect;
     public GameObject shieldPrefab;
-	public float fireDelay = 0.25f;
+	public float defenseDelay;
 
 	private float cooldownTimer = 0;
 	private GameObject shield = null;
@@ -21,24 +21,32 @@ public class GreenShoot : MonoBehaviour {
 		cooldownTimer -= Time.deltaTime;
 
 		if(Input.GetButton("Fire1") && cooldownTimer <= 0){
-			cooldownTimer = fireDelay;
+			cooldownTimer = defenseDelay;
 			shield = Instantiate(shieldPrefab, transform.position, transform.rotation);
             soundEffect.Play();
             Animator animacion = shield.GetComponent<Animator> ();
 			animacion.SetBool ("greenNormal", true);
 			animacion.SetBool ("greenSpecial", false);
+//			destroyShield (shield);
 		}
 
 		if (Input.GetKey (KeyCode.LeftShift) && cooldownTimer <= 0/*La segunda condicion seria tener 100% deenergia cargada*/) {
-			cooldownTimer = fireDelay;
+			cooldownTimer = defenseDelay;
 			shield = Instantiate(shieldPrefab, transform.position, transform.rotation);
 
 			Animator animacion = shield.GetComponent<Animator> ();
 			animacion.SetBool ("greenNormal", false);
 			animacion.SetBool ("greenSpecial", true);
+//			destroyShield (shield);
 		}
 
 		if (shield != null)
 			shield.transform.position = transform.position;
+	}
+
+	void destroyShield(GameObject shield){
+		if (GetComponent<Animator> ().GetBool ("redMode"))
+			Debug.Log (GetComponent<Animator> ().GetBool ("redMode"));
+			Destroy (shield);
 	}
 }

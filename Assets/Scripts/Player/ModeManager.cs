@@ -15,9 +15,12 @@ public class ModeManager : MonoBehaviour {
 
 	private Animator animacion;
 	private GameObject parent;
+	private float cooldownTimer;
+	public float changeDelay;
 
 	// Use this for initialization
 	void Start () {
+		cooldownTimer = 0f;
 		parent = this.transform.parent.gameObject;
 
 		animacion = this.transform.parent.GetComponent<Animator> ();
@@ -26,17 +29,28 @@ public class ModeManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.Alpha2) && animacion.GetBool ("redMode")) {
-			animacion.SetBool ("greenMode", true);
-			animacion.SetBool ("redMode", false);
-		}
+		cooldownTimer -= Time.deltaTime;
 
-		if (Input.GetKey (KeyCode.Alpha1) && animacion.GetBool ("greenMode")) {
-			animacion.SetBool ("redMode", true);
-			animacion.SetBool ("greenMode", false);
-		}
+		if (enabledChange()) {
+			if (Input.GetKey (KeyCode.Alpha2) && animacion.GetBool ("redMode")) {
+				animacion.SetBool ("greenMode", true);
+				animacion.SetBool ("redMode", false);
+				cooldownTimer = changeDelay;
+			}
 
-		parent.GetComponent<RedShoot> ().enabled = animacion.GetBool ("redMode");
-		parent.GetComponent<GreenShoot> ().enabled = animacion.GetBool ("greenMode");
+			if (Input.GetKey (KeyCode.Alpha1) && animacion.GetBool ("greenMode")) {
+				animacion.SetBool ("redMode", true);
+				animacion.SetBool ("greenMode", false);
+				cooldownTimer = changeDelay;
+			}
+
+			parent.GetComponent<RedShoot> ().enabled = animacion.GetBool ("redMode");
+			parent.GetComponent<GreenShoot> ().enabled = animacion.GetBool ("greenMode");
+		}
+	}
+
+	bool enabledChange(){
+		Debug.Log (cooldownTimer);
+		return cooldownTimer <= 0f;
 	}
 }

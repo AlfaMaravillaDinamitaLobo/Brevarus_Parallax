@@ -337,6 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 704881940c2e4914ba40a200e6e88f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changeDelay: 1
 --- !u!1 &1996523330
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +620,7 @@ MonoBehaviour:
   soundEffect: {fileID: 2010923438}
   shieldPrefab: {fileID: 1083018282374902, guid: c9996a3dd882cc84f8ce7e85c240fe14,
     type: 2}
-  fireDelay: 5
+  defenseDelay: 5
 --- !u!82 &2010923438
 AudioSource:
   m_ObjectHideFlags: 0
