@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChangeGreenMode : MonoBehaviour {
 
-	private Animator animacion;
+	public static Animator animacion;
 
 	// Use this for initialization
 	void Start () {
