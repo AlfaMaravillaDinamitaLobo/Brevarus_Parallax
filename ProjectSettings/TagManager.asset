@@ -18,7 +18,11 @@ TagManager:
   - Player
   - Enemy
   - Invulnerable
+<<<<<<< HEAD
   - GreenShot
+=======
+  - Special
+>>>>>>> disparoEnchetado
   - 
   - 
   - 
