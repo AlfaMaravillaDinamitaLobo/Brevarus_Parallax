@@ -4,18 +4,12 @@ using UnityEngine;
 
 public class GreenShoot : MonoBehaviour {
 
-    public AudioClip soundClip;
-    public AudioSource soundEffect;
     public GameObject shieldPrefab;
 	public float defenseDelay;
 
 	private float cooldownTimer = 0;
 	private GameObject shield = null;
 
-    private void Start()
-    {
-        soundEffect.clip = soundClip;
-    }
 
     void Update () {
 		cooldownTimer -= Time.deltaTime;
@@ -23,7 +17,6 @@ public class GreenShoot : MonoBehaviour {
 		if(Input.GetButton("Fire1") && cooldownTimer <= 0){
 			cooldownTimer = defenseDelay;
 			shield = Instantiate(shieldPrefab, transform.position, transform.rotation);
-            soundEffect.Play();
             Animator animacion = shield.GetComponent<Animator> ();
 			animacion.SetBool ("greenNormal", true);
 			animacion.SetBool ("greenSpecial", false);
