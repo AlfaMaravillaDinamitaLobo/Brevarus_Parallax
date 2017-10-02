@@ -8,15 +8,18 @@ public class EnemySpawner : MonoBehaviour {
 
 	public GameObject lvl1Enemy1;
 	public GameObject lvl1Enemy2;
+	public GameObject lvl1Enemy3;
+
 	public bool faltaOleada1 = true;
 	public bool faltaOleada2 = true;
+	public bool faltaOleada3 = true;
 
 	private OleadasNivel1 nivel1;
 	private float timer;
 
 	// Use this for initialization
 	void Start () {
-		nivel1 = new OleadasNivel1 (lvl1Enemy1,lvl1Enemy2);
+		nivel1 = new OleadasNivel1 (lvl1Enemy1,lvl1Enemy2,lvl1Enemy3);
 		timer = 0f;
 	}
 	
@@ -32,6 +35,11 @@ public class EnemySpawner : MonoBehaviour {
 		if (timer >= 15f && faltaOleada2) {
 			nivel1.segundaOleada (camera);
 			faltaOleada2 = false;
+		}
+
+		if (timer >= 25f && faltaOleada3) {
+			nivel1.tercerOleada (camera);
+			faltaOleada3 = false;
 		}
 	}
 }

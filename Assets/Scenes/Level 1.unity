@@ -294,8 +294,10 @@ MonoBehaviour:
   camera: {fileID: 1996523335}
   lvl1Enemy1: {fileID: 1508183018991102, guid: 11d4bcae521ce4b459b9ab9e37aeaf31, type: 2}
   lvl1Enemy2: {fileID: 1943117814668342, guid: 7c0283bffc6ca614bbd45b13d41f2459, type: 2}
+  lvl1Enemy3: {fileID: 1273254928523244, guid: 2d5744593b21d7343b78c0edfb3e9b53, type: 2}
   faltaOleada1: 1
   faltaOleada2: 1
+  faltaOleada3: 1
 --- !u!4 &879093721
 Transform:
   m_ObjectHideFlags: 0
@@ -596,7 +598,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2010923428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1782553471}

@@ -18,11 +18,11 @@ public class Enemy2Mov : MonoBehaviour {
 			transform.position -= Vector3.right * velocidadMovimiento * Time.deltaTime;
 		}
 
-		if (transform.position.x >= 13f) {
+		if (transform.position.x >= Properties.limitX() -2f) {
 			llegoAlFinal = false;
 		}
 
-		if (transform.position.x <= -13f) {
+		if (transform.position.x <= -Properties.limitX() +2f) {
 			llegoAlFinal = true;
 		}
 	}

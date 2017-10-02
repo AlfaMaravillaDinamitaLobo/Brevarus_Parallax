@@ -14,7 +14,7 @@ public class EnemyShooting : MonoBehaviour {
     void Update()
     {
         cooldownTimer -= Time.deltaTime;
-        if (cooldownTimer <= 0)
+		if (cooldownTimer <= 0 && Properties.gameObjectIsVisible(gameObject))
         {
             Debug.Log("Disparo del enemigo");
             cooldownTimer = fireDelay;
