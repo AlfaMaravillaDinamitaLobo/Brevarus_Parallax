@@ -18,7 +18,7 @@ public class RedShoot : MonoBehaviour {
 		if(Input.GetButton("Fire1") && cooldownTimer <= 0)
         {
 
-            Debug.Log("Disparo del jugador");
+            //Debug.Log("Disparo del jugador");
             cooldownTimer = fireDelay;
 
             Vector3 offset1 = transform.rotation * new Vector3(0.5f, 1f, 0);

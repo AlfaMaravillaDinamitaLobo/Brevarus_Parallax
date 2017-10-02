@@ -21,12 +21,12 @@ GameObject:
   - component: {fileID: 4174851005213494}
   - component: {fileID: 212191068509749004}
   - component: {fileID: 50799925695280820}
-  - component: {fileID: 114995831098983666}
   - component: {fileID: 114948075219653894}
   - component: {fileID: 114481398374836644}
   - component: {fileID: 114082289899950246}
   - component: {fileID: 70490471473702104}
   - component: {fileID: 61473525094302156}
+  - component: {fileID: 114192996649013316}
   m_Layer: 9
   m_Name: Enemy 1
   m_TagString: Enemy
@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1508183018991102}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 11.27, y: 10.05, z: 0}
+  m_LocalPosition: {x: 14.421578, y: -0.39098775, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -122,6 +122,20 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1447060114647580, guid: 0ce05e5c270042c4bb2fda2462d731b7,
     type: 2}
   fireDelay: 1.5
+--- !u!114 &114192996649013316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1508183018991102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3164ff650a3db458344431e70ec0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  effect: {fileID: 1627217014336538, guid: dc551c882c6e5fb47a43b203fb8e5c56, type: 2}
+  powerUp: {fileID: 1432128366966228, guid: fc558b7d252a48f47a823c9c22fa1d0c, type: 2}
 --- !u!114 &114481398374836644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,19 +159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3c3ef26af668b45881e600794060fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114995831098983666
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1508183018991102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff85146b8ac6c541965542230c25dfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  invulnPeriod: 0
 --- !u!212 &212191068509749004
 SpriteRenderer:
   m_ObjectHideFlags: 1

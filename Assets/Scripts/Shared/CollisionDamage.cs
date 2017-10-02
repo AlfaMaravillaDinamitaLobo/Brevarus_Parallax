@@ -8,6 +8,7 @@ public class CollisionDamage : MonoBehaviour {
     public float invulnPeriod = 0;
     float invulnTimer = 0;
     int correctLayer;
+    public GameObject effect;
 
     void Start()
     {
@@ -16,7 +17,6 @@ public class CollisionDamage : MonoBehaviour {
 
     void OnTriggerEnter2D()
     {
-        Debug.Log("Activado el trigger");
         health--;
         invulnTimer = invulnPeriod;
         gameObject.layer = 10;
@@ -37,6 +37,7 @@ public class CollisionDamage : MonoBehaviour {
     }
     void Die()
     {
+        Instantiate(effect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }

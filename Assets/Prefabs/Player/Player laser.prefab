@@ -26,7 +26,6 @@ GameObject:
   - component: {fileID: 114875194110350450}
   - component: {fileID: 114899577093512118}
   - component: {fileID: 82522183014851796}
-  - component: {fileID: 114362280482325408}
   m_Layer: 8
   m_Name: Player laser
   m_TagString: Untagged
@@ -172,19 +171,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114362280482325408
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1993149098620072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f112e9c35e44bf4dab9ba9ebe94bbdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effectPrefab: {fileID: 1710498715457572, guid: 57aa2dc0aab4ccc4eae14b31eebecd94,
-    type: 2}
 --- !u!114 &114673415925910066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,6 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   invulnPeriod: 0
+  effect: {fileID: 1710498715457572, guid: 57aa2dc0aab4ccc4eae14b31eebecd94, type: 2}
 --- !u!114 &114875194110350450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c22fbabe011ecd419d20a220f61a961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 5
+  destroyTime: 5
 --- !u!212 &212770390385755398
 SpriteRenderer:
   m_ObjectHideFlags: 1

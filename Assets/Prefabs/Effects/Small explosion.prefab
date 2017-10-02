@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4736981173691568}
   - component: {fileID: 95168188414907596}
   - component: {fileID: 212132575077405662}
-  - component: {fileID: 114020801981017208}
   - component: {fileID: 82096822789726040}
-  m_Layer: 0
+  - component: {fileID: 114093015295888046}
+  m_Layer: 12
   m_Name: Small explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1144548320260124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3922808, y: 3.978818, z: 0}
+  m_LocalPosition: {x: -10.7820635, y: 2.4296355, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -140,7 +140,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114020801981017208
+--- !u!114 &114093015295888046
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -148,10 +148,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1144548320260124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b65c214b36ccea45b1c978eb1683902, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c22fbabe011ecd419d20a220f61a961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 1.55
+  destroyTime: 1.36
 --- !u!212 &212132575077405662
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4128320835238654}
   - component: {fileID: 95937342928960996}
   - component: {fileID: 212606461665643650}
-  - component: {fileID: 114311545194040220}
   - component: {fileID: 82732314429302682}
+  - component: {fileID: 114555301408866146}
   m_Layer: 12
   m_Name: Blue shield
   m_TagString: Untagged
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403845660756108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.539916, y: 3.894507, z: 0}
+  m_LocalPosition: {x: 6.414646, y: 6.6150784, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -140,7 +140,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114311545194040220
+--- !u!114 &114555301408866146
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1403845660756108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b65c214b36ccea45b1c978eb1683902, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c22fbabe011ecd419d20a220f61a961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0.43

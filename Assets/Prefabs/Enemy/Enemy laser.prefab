@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 82203340234827778}
   m_Layer: 9
   m_Name: Enemy laser
-  m_TagString: Untagged
+  m_TagString: Enemy proyectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c22fbabe011ecd419d20a220f61a961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 5
+  destroyTime: 5
 --- !u!114 &114812451861384974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   invulnPeriod: 0
+  effect: {fileID: 1710498715457572, guid: 57aa2dc0aab4ccc4eae14b31eebecd94, type: 2}
 --- !u!212 &212160690479256606
 SpriteRenderer:
   m_ObjectHideFlags: 1
