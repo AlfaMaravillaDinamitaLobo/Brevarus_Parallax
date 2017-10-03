@@ -22,13 +22,13 @@ GameObject:
   - component: {fileID: 212104007951859970}
   - component: {fileID: 114528562743876512}
   - component: {fileID: 114400600673910796}
-  - component: {fileID: 114053516490642292}
   - component: {fileID: 70275422327256698}
   - component: {fileID: 61259827481116402}
   - component: {fileID: 50595557467759048}
+  - component: {fileID: 114781550158687050}
   m_Layer: 9
   m_Name: Enemy 2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,9 @@ Transform:
   m_GameObject: {fileID: 1943117814668342}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 10, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 10.292556, y: 8.951555, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -106,19 +108,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0}
   m_Size: {x: 7.3778343, y: 16}
   m_Direction: 0
---- !u!114 &114053516490642292
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1943117814668342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff85146b8ac6c541965542230c25dfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  invulnPeriod: 0
 --- !u!114 &114400600673910796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,6 +137,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d47ebe3b25cd594c993c99fa08e215d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114781550158687050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1943117814668342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3164ff650a3db458344431e70ec0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 15
+  effect: {fileID: 1627217014336538, guid: dc551c882c6e5fb47a43b203fb8e5c56, type: 2}
+  powerUp: {fileID: 1651468672807288, guid: 642ea5e49faa47443b2efd854e3470bf, type: 2}
 --- !u!212 &212104007951859970
 SpriteRenderer:
   m_ObjectHideFlags: 1

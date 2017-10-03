@@ -17,12 +17,15 @@ public class ModeManager : MonoBehaviour {
 	private GameObject parent;
 	private float cooldownTimer;
 	public float changeDelay;
-
+    AudioSource sound;
+    
+   
 	// Use this for initialization
 	void Start () {
-		cooldownTimer = 0f;
+        sound = GetComponent<AudioSource>();
+        cooldownTimer = 0f;
 		parent = this.transform.parent.gameObject;
-
+        
 		animacion = this.transform.parent.GetComponent<Animator> ();
 		animacion.SetBool ("redMode", true);
 	}
@@ -36,13 +39,16 @@ public class ModeManager : MonoBehaviour {
 				animacion.SetBool ("greenMode", true);
 				animacion.SetBool ("redMode", false);
 				cooldownTimer = changeDelay;
-			}
+                sound.Play();
+
+            }
 
 			if (Input.GetKey (KeyCode.Alpha1) && animacion.GetBool ("greenMode")) {
 				animacion.SetBool ("redMode", true);
 				animacion.SetBool ("greenMode", false);
 				cooldownTimer = changeDelay;
-			}
+                sound.Play();
+            }
 
 			parent.GetComponent<RedShoot> ().enabled = animacion.GetBool ("redMode");
 			parent.GetComponent<GreenShoot> ().enabled = animacion.GetBool ("greenMode");
@@ -50,7 +56,7 @@ public class ModeManager : MonoBehaviour {
 	}
 
 	bool enabledChange(){
-		Debug.Log (cooldownTimer);
+		//Debug.Log (cooldownTimer);
 		return cooldownTimer <= 0f;
 	}
 }
