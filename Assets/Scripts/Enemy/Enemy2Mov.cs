@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Enemy2Mov : MonoBehaviour {
 
-	float velocidadMovimiento = 8f;
+	float velocidadMovimiento = 5f;
 	bool llegoAlFinal;
 
 	// Update is called once per frame

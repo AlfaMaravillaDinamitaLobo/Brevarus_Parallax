@@ -16,6 +16,11 @@ public class CollisionDamage : MonoBehaviour {
 
     void OnTriggerEnter2D()
     {
+		Physics2D.IgnoreLayerCollision (8, 13);
+		Physics2D.IgnoreLayerCollision (13, 8);
+		Physics2D.IgnoreLayerCollision (12, 12);
+		Physics2D.IgnoreLayerCollision (13, 12);
+		Physics2D.IgnoreLayerCollision (12, 13);
         Debug.Log("Activado el trigger");
         health--;
         invulnTimer = invulnPeriod;
