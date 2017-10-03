@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Enemy
   - Enemy proyectile
+  - Money
+  - Bullet
+  - Energy
+  - Shield
+  - Health
+  - Life
   layers:
   - Default
   - TransparentFX
@@ -22,7 +28,6 @@ TagManager:
   - Effect
   - Bullets
   - PlayerLaser
-  - 
   - 
   - 
   - 

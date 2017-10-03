@@ -21,7 +21,7 @@ public class MiniBossColisionDmg : MonoBehaviour {
 		health--;
 		invulnTimer = invulnPeriod;
 		gameObject.layer = 10;
-		gameObject.GetComponent<Animator> ().Play("OnHit");
+		GetComponent<Animator> ().Play("OnHit");
 	}
 
 	void Update()

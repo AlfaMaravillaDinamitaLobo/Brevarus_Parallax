@@ -94,6 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   invulnPeriod: 0
+  effect: {fileID: 1627217014336538, guid: dc551c882c6e5fb47a43b203fb8e5c56, type: 2}
 --- !u!114 &114313137889369588
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50745062601352102}
   - component: {fileID: 114166157029796434}
   - component: {fileID: 114401823857569990}
+  - component: {fileID: 114381895667170764}
   m_Layer: 9
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -90,7 +91,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c22fbabe011ecd419d20a220f61a961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 8
+  destroyTime: 5
+--- !u!114 &114381895667170764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1833713521241960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff85146b8ac6c541965542230c25dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  invulnPeriod: 0
+  effect: {fileID: 1710498715457572, guid: 57aa2dc0aab4ccc4eae14b31eebecd94, type: 2}
 --- !u!114 &114401823857569990
 MonoBehaviour:
   m_ObjectHideFlags: 1

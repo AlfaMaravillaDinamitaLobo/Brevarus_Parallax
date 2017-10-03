@@ -6,11 +6,15 @@ public class OleadasNivel1 : MonoBehaviour
 	private GameObject enemy1;
 	private GameObject enemy2;
 	private GameObject enemy3;
+	private GameObject enemy4;
+	private GameObject miniboss;
 
-	public OleadasNivel1(GameObject enemy1Prefab, GameObject enemy2Prefab, GameObject enemy3Prefab){
+	public OleadasNivel1(GameObject enemy1Prefab, GameObject enemy2Prefab, GameObject enemy3Prefab, GameObject enemy4Prefab, GameObject boss){
 		enemy1 = enemy1Prefab;
 		enemy2 = enemy2Prefab;
 		enemy3 = enemy3Prefab;
+		enemy4 = enemy4Prefab;
+		miniboss = boss;
 	}
 
 	public void primerOleada (Transform camera){
@@ -67,6 +71,16 @@ public class OleadasNivel1 : MonoBehaviour
 		/*Se le suma 2.9 para que los enemigos aparescan por encima de la posicion de la camara, y para que
 			esta sea 0 se le suma 2.9
 		*/
+	}
+
+	public void cuartaOleada (Transform camera)
+	{
+		
+	}
+
+	public void spawnBoss (Transform camera)
+	{
+		
 	}
 }
 

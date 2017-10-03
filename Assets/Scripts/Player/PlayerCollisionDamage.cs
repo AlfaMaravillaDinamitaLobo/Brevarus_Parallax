@@ -17,6 +17,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+		
         health--;
         invulnTimer = invulnPeriod;
         gameObject.layer = LayerMask.NameToLayer("Invulnerable");
@@ -41,4 +42,9 @@ public class PlayerCollisionDamage : MonoBehaviour {
         Instantiate(effect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
+
+	public void Recover()
+	{
+		health = Mathf.Min(health + 6, 12);
+	}
 }

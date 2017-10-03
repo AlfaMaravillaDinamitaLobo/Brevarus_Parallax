@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114590977218950196}
   m_Layer: 0
   m_Name: Power up reparacion
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
