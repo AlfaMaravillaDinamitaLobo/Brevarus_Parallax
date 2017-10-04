@@ -17,7 +17,7 @@ public class OleadasNivel1 : MonoBehaviour
 		miniboss = boss;
 	}
 
-	public void primerOleada (Transform camera){
+	public void segundaOleada (Transform camera){
 		float currentRotation = 0f;
 
 		Instantiate(enemy1, camera.position + new Vector3(0f,						-Properties.limitY() -11f,	2.9f), angleRotation(ref currentRotation));
@@ -41,9 +41,15 @@ public class OleadasNivel1 : MonoBehaviour
 		return angle;
 	}
 
-	public void segundaOleada (Transform camera){
+	public void primerOleada (Transform camera){
 		Instantiate(enemy2, camera.position + new Vector3(Properties.limitX()-2f,Properties.limitY()-2f,2.9f),flip(camera.rotation));
 		Instantiate(enemy2, camera.position + new Vector3(-Properties.limitX()+2f,Properties.limitY()-2f,2.9f),flip(camera.rotation));
+
+		float addY = 0f;
+		for (float y = 0f; y < 5f; y += 4) {
+			Instantiate (enemy4, camera.position + new Vector3 (Properties.limitX(), y , 2.9f),camera.rotation);
+			Instantiate (enemy4, camera.position + new Vector3 (-Properties.limitX(), y , 2.9f),camera.rotation);
+		}
 
 		/*Se le suma 2.9 para que los enemigos aparescan por encima de la posicion de la camara, y para que
 			esta sea 0 se le suma 2.9
@@ -73,14 +79,16 @@ public class OleadasNivel1 : MonoBehaviour
 		*/
 	}
 
-	public void cuartaOleada (Transform camera)
-	{
-		
-	}
-
 	public void spawnBoss (Transform camera)
 	{
-		
+		/*GameObject enemy = */Instantiate (miniboss, camera.position + new Vector3 (0, Properties.limitY()-1f, 2.9f),camera.rotation);
+
+		//enemy.GetComponent<Enemy2Mov> ().enabled = false;
+		//enemy.GetComponent<Rigidbody2D>().AddForce (Vector2.down * 15.0f, ForceMode2D.Impulse);
+
+		/*Se le suma 2.9 para que los enemigos aparescan por encima de la posicion de la camara, y para que
+			esta sea 0 se le suma 2.9
+		*/
 	}
 }
 

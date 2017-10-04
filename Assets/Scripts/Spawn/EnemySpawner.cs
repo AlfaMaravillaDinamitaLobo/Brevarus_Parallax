@@ -36,25 +36,21 @@ public class EnemySpawner : MonoBehaviour {
 			faltaOleada1 = false;
 		}
 
-		if (timer >= 15f && faltaOleada2) {
+		if (timer >= 20f && faltaOleada2) {
 			nivel1.segundaOleada (camera);
 			faltaOleada2 = false;
 		}
 
-		if (timer >= 25f && faltaOleada3) {
+		if (timer >= 30f && faltaOleada3) {
 			nivel1.tercerOleada (camera);
 			faltaOleada3 = false;
 		}
-
-		if (timer >= 45f && faltaOleada4) {
-			nivel1.cuartaOleada (camera);
-			faltaOleada4 = false;
-		}
-
 
 		if (timer >= 60f && faltaBoss) {
 			nivel1.spawnBoss (camera);
 			faltaBoss = false;
 		}
+
+		Debug.Log (timer);
 	}
 }
