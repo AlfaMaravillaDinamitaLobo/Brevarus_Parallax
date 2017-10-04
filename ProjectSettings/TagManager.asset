@@ -12,6 +12,7 @@ TagManager:
   - Shield
   - Health
   - Life
+  - Player shield
   layers:
   - Default
   - TransparentFX
