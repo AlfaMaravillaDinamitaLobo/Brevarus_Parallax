@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionDamage : MonoBehaviour {
+public class PlayerLaserCollisionDamage : MonoBehaviour
+{
 
     public int health = 1;
     public float invulnPeriod = 0;
@@ -17,20 +18,20 @@ public class CollisionDamage : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Enemy")
         {
             health--;
             invulnTimer = invulnPeriod;
             gameObject.layer = 10;
         }
 
-        
+
     }
 
     void Update()
     {
         invulnTimer -= Time.deltaTime;
-        if(invulnTimer <= 0)
+        if (invulnTimer <= 0)
         {
             gameObject.layer = correctLayer;
         }
