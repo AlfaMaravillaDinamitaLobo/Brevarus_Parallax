@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 212770390385755398}
   - component: {fileID: 61312870543343248}
   - component: {fileID: 50921388282996922}
-  - component: {fileID: 114673415925910066}
   - component: {fileID: 114875194110350450}
   - component: {fileID: 114899577093512118}
   - component: {fileID: 82522183014851796}
+  - component: {fileID: 114423367252082298}
   m_Layer: 8
   m_Name: Player laser
   m_TagString: Untagged
@@ -171,7 +171,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114673415925910066
+--- !u!114 &114423367252082298
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1993149098620072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff85146b8ac6c541965542230c25dfa, type: 3}
+  m_Script: {fileID: 11500000, guid: c91e31272ed82ec4d891a3db1987397f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
