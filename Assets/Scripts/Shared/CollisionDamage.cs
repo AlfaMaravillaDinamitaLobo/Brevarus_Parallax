@@ -17,14 +17,13 @@ public class CollisionDamage : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player" || other.tag == "Player shield")
+        if(other.tag == "Player")
         {
+            other.GetComponent<PlayerCollisionDamage>().ReceiveDamage(1);
             health--;
             invulnTimer = invulnPeriod;
             gameObject.layer = 10;
         }
-
-        
     }
 
     void Update()
@@ -39,7 +38,8 @@ public class CollisionDamage : MonoBehaviour {
             Die();
         }
     }
-    void Die()
+
+    public void Die()
     {
         Instantiate(effect, transform.position, transform.rotation);
         Destroy(gameObject);

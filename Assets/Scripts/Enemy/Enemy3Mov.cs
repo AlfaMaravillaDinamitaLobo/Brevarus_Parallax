@@ -9,7 +9,7 @@ public class Enemy3Mov : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		GameObject obj = GameObject.Find("Player");
+		GameObject obj = GameObject.Find("Ship");
 
 		if(obj != null)
 		{

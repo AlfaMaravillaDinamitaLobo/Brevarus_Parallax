@@ -18,7 +18,6 @@ public class Enemy2Shooting : MonoBehaviour{
 		cooldownTimer -= Time.deltaTime;
 		if (cooldownTimer <= 0)
 		{
-			Debug.Log("Disparo del enemigo");
 			cooldownTimer = fireDelay;
 
 			Vector3 offset1 = transform.rotation * bulletOffset1;

@@ -19,14 +19,14 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4174851005213494}
-  - component: {fileID: 212191068509749004}
   - component: {fileID: 50799925695280820}
-  - component: {fileID: 114948075219653894}
-  - component: {fileID: 114481398374836644}
-  - component: {fileID: 114082289899950246}
   - component: {fileID: 70490471473702104}
   - component: {fileID: 61473525094302156}
+  - component: {fileID: 212191068509749004}
+  - component: {fileID: 114948075219653894}
+  - component: {fileID: 114481398374836644}
   - component: {fileID: 114192996649013316}
+  - component: {fileID: 114082289899950246}
   m_Layer: 9
   m_Name: Enemy 1
   m_TagString: Enemy
@@ -133,9 +133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3164ff650a3db458344431e70ec0b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  effect: {fileID: 1627217014336538, guid: dc551c882c6e5fb47a43b203fb8e5c56, type: 2}
+  deathEffect: {fileID: 1072731098639658, guid: 2fb365177def02c4ca7bf907fde1490c,
+    type: 2}
   powerUp: {fileID: 1432128366966228, guid: fc558b7d252a48f47a823c9c22fa1d0c, type: 2}
+  invulnPeriod: 0.1
+  health: 10
 --- !u!114 &114481398374836644
 MonoBehaviour:
   m_ObjectHideFlags: 1

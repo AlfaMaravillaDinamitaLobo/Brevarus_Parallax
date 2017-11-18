@@ -27,8 +27,8 @@ GameObject:
   - component: {fileID: 114403613536455288}
   - component: {fileID: 82203340234827778}
   m_Layer: 9
-  m_Name: Enemy laser
-  m_TagString: Enemy proyectile
+  m_Name: Red laser
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

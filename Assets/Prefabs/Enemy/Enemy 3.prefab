@@ -19,16 +19,16 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4864395112783026}
-  - component: {fileID: 212495989823329968}
   - component: {fileID: 50019700546377454}
   - component: {fileID: 58537621346806232}
+  - component: {fileID: 212495989823329968}
   - component: {fileID: 114738976920232384}
-  - component: {fileID: 114214286228030036}
-  - component: {fileID: 114319205808241142}
   - component: {fileID: 114313137889369588}
+  - component: {fileID: 114628286901789974}
+  - component: {fileID: 114319205808241142}
   m_Layer: 9
   m_Name: Enemy 3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,20 +81,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.7312808}
   serializedVersion: 2
   m_Radius: 1.5587192
---- !u!114 &114214286228030036
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1273254928523244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff85146b8ac6c541965542230c25dfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  invulnPeriod: 0
-  effect: {fileID: 1627217014336538, guid: dc551c882c6e5fb47a43b203fb8e5c56, type: 2}
 --- !u!114 &114313137889369588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -122,6 +108,22 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1833713521241960, guid: 4091565b174a15a44a50b865ec733e4c,
     type: 2}
   fireDelay: 0.5
+--- !u!114 &114628286901789974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273254928523244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3164ff650a3db458344431e70ec0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathEffect: {fileID: 1627217014336538, guid: dc551c882c6e5fb47a43b203fb8e5c56,
+    type: 2}
+  powerUp: {fileID: 1432128366966228, guid: fc558b7d252a48f47a823c9c22fa1d0c, type: 2}
+  invulnPeriod: 0.1
+  health: 7
 --- !u!114 &114738976920232384
 MonoBehaviour:
   m_ObjectHideFlags: 1

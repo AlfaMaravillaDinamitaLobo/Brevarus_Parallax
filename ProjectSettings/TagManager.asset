@@ -13,6 +13,9 @@ TagManager:
   - Health
   - Life
   - Player shield
+  - Red
+  - Green
+  - Boss
   layers:
   - Default
   - TransparentFX

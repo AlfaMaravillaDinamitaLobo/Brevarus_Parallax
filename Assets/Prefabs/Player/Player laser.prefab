@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 50921388282996922}
   - component: {fileID: 114875194110350450}
   - component: {fileID: 114899577093512118}
-  - component: {fileID: 82522183014851796}
   - component: {fileID: 114423367252082298}
+  - component: {fileID: 82522183014851796}
   m_Layer: 8
   m_Name: Player laser
   m_TagString: Untagged
@@ -182,9 +182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c91e31272ed82ec4d891a3db1987397f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  invulnPeriod: 0
   effect: {fileID: 1710498715457572, guid: 57aa2dc0aab4ccc4eae14b31eebecd94, type: 2}
+  damage: 1
 --- !u!114 &114875194110350450
 MonoBehaviour:
   m_ObjectHideFlags: 1

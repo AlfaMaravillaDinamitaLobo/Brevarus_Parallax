@@ -36,6 +36,12 @@ public class MiniBossColisionDmg : MonoBehaviour {
 			Die();
 		}
 	}
+
+    public void ReceiveDamage(int damage)
+    {
+        health = health - damage;
+    }
+
 	void Die()
 	{
 		Destroy(gameObject);

@@ -51,6 +51,6 @@ public class EnemySpawner : MonoBehaviour {
 			faltaBoss = false;
 		}
 
-		Debug.Log (timer);
+		//Debug.Log (timer);
 	}
 }

@@ -4,42 +4,18 @@ using UnityEngine;
 
 public class PlayerLaserCollisionDamage : MonoBehaviour
 {
-
-    public int health = 1;
-    public float invulnPeriod = 0;
-    float invulnTimer = 0;
-    int correctLayer;
     public GameObject effect;
-
-    void Start()
-    {
-        correctLayer = gameObject.layer;
-    }
-
+    public int damage;
+ 
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Enemy")
         {
-            health--;
-            invulnTimer = invulnPeriod;
-            gameObject.layer = 10;
-        }
-
-
-    }
-
-    void Update()
-    {
-        invulnTimer -= Time.deltaTime;
-        if (invulnTimer <= 0)
-        {
-            gameObject.layer = correctLayer;
-        }
-        if (health <= 0)
-        {
+            other.GetComponent<EnemyCollisionDamage>().ReceiveDamage(damage);
             Die();
         }
     }
+
     void Die()
     {
         Instantiate(effect, transform.position, transform.rotation);

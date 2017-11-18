@@ -10,7 +10,7 @@ public class FacePlayer : MonoBehaviour {
 	void Update () {
 		if(player == null)
         {
-            GameObject obj = GameObject.Find("Player");
+            GameObject obj = GameObject.Find("Ship");
 
             if(obj != null)
             {

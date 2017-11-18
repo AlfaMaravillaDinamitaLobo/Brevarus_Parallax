@@ -6,13 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 
     float maxSpeed = 15f;
 
-    void Start () {
-		
-	}
-
 	void Update () {
-
-        //MOVIMIENTO DEL JUGADOR
 
 		Vector3 posY = transform.position;
 
@@ -28,6 +22,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 
 		Vector3 posX = transform.position;
+
 		if (Input.GetAxis ("Horizontal") < 0 && transform.position.x >= -13.5f) {
 			Vector3 velocityX = new Vector3(Input.GetAxis("Horizontal") * maxSpeed * Time.deltaTime, 0, 0);
 			posX += velocityX;
@@ -38,7 +33,6 @@ public class PlayerMovement : MonoBehaviour {
 			posX += velocityX;
 			transform.position = posX;
 		}
-        
     }
 }
 
