@@ -12,21 +12,13 @@ public class Specials : MonoBehaviour {
 		}
 		if(tag == "Life")
 		{
-
+			//gameObject.GetComponent<PlayerCollisionDamage>().ExtraLife();
 		}
 		if(tag == "Health")
 		{
 			gameObject.GetComponent<PlayerCollisionDamage>().Recover();
 		}
 		if(tag == "Shield")
-		{
-
-		}
-		if(tag == "Energy")
-		{
-
-		}
-		if(tag == "Money")
 		{
 
 		}
