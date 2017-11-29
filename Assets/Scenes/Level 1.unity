@@ -77,17 +77,15 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFilterTypeDirect: 0
-    m_PVRFilterTypeIndirect: 0
-    m_PVRFilterTypeAO: 0
+    m_PVRFiltering: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
-    m_PVRFilteringAtrousPositionSigmaIndirect: 2
-    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_PVRFilteringAtrousColorSigma: 1
+    m_PVRFilteringAtrousNormalSigma: 1
+    m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -506,7 +504,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 879093719}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f27ecdfc5f99c4e468432716c1fa26fe, type: 3}
   m_Name: 
@@ -810,7 +808,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1188180126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.64, y: -0.38, z: 0}
+  m_LocalPosition: {x: -9.29, y: -7.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1952845377}
@@ -831,6 +829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca115601823acce448af7d2e8a50b490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  verticalMovement: Vertical
+  horizontalMovement: Horizontal
 --- !u!50 &1188180130
 Rigidbody2D:
   serializedVersion: 4
@@ -876,6 +876,8 @@ MonoBehaviour:
   shieldPrefab: {fileID: 1083018282374902, guid: c9996a3dd882cc84f8ce7e85c240fe14,
     type: 2}
   defenseDelay: 5
+  botonDeDisparo1: Fire1
+  botonDeDisparo2: Fire2
 --- !u!114 &1188180133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -894,6 +896,8 @@ MonoBehaviour:
   specialPrefab: {fileID: 1331346215888066, guid: fb2c6846554fa134ea6728df56b713e5,
     type: 2}
   fireDelay: 0.15
+  botonDeDisparo1: Fire1
+  botonDeDisparo2: Fire2
 --- !u!114 &1188180134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,6 +984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTimer: 0
+  modeChange: ModeChange_P1
 --- !u!1 &1946462569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,3 +1268,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1001 &2082806335
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4125826311753922, guid: 17b7f3752b8ed604e93882c1cdcf7efc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 8.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125826311753922, guid: 17b7f3752b8ed604e93882c1cdcf7efc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125826311753922, guid: 17b7f3752b8ed604e93882c1cdcf7efc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125826311753922, guid: 17b7f3752b8ed604e93882c1cdcf7efc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125826311753922, guid: 17b7f3752b8ed604e93882c1cdcf7efc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125826311753922, guid: 17b7f3752b8ed604e93882c1cdcf7efc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125826311753922, guid: 17b7f3752b8ed604e93882c1cdcf7efc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125826311753922, guid: 17b7f3752b8ed604e93882c1cdcf7efc, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 17b7f3752b8ed604e93882c1cdcf7efc, type: 2}
+  m_IsPrefabParent: 0

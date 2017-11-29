@@ -12,10 +12,13 @@ public class RedShoot : MonoBehaviour {
     private float cooldownTimer = 0;
 	private GameObject specialShoot = null;
 
+	public string botonDeDisparo1 = "Fire1";
+	public string botonDeDisparo2 = "Fire2";
+
 
     void Update () {
         cooldownTimer -= Time.deltaTime;
-		if(Input.GetButton("Fire1") && cooldownTimer <= 0)
+		if(Input.GetButton(botonDeDisparo1) && cooldownTimer <= 0)
         {
 
             //Debug.Log("Disparo del jugador");
@@ -27,7 +30,7 @@ public class RedShoot : MonoBehaviour {
             Instantiate(laserPrefab2, transform.position + offset2, transform.rotation);         
         }
 
-		if (Input.GetKey (KeyCode.LeftShift) && cooldownTimer <= 0/*La segunda condicion seria tener 100% deenergia cargada*/) {
+		if (Input.GetButton(botonDeDisparo2) && cooldownTimer <= 0/*La segunda condicion seria tener 100% deenergia cargada*/) {
 			cooldownTimer = fireDelay;
 			specialShoot = Instantiate(specialPrefab, transform.position, transform.rotation);
 

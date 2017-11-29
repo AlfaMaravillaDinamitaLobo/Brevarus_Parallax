@@ -9,12 +9,14 @@ public class GreenShoot : MonoBehaviour {
 
 	private float cooldownTimer = 0;
 	private GameObject shield = null;
+	public string botonDeDisparo1 = "Fire1";
+	public string botonDeDisparo2 = "Fire2";
 
 
     void Update () {
 		cooldownTimer -= Time.deltaTime;
 
-		if(Input.GetButton("Fire1") && cooldownTimer <= 0){
+		if(Input.GetButton(botonDeDisparo1) && cooldownTimer <= 0){
 			cooldownTimer = defenseDelay;
 			shield = Instantiate(shieldPrefab, transform.position, transform.rotation);
             Animator animacion = shield.GetComponent<Animator> ();
@@ -23,7 +25,7 @@ public class GreenShoot : MonoBehaviour {
 //			destroyShield (shield);
 		}
 
-		if (Input.GetKey (KeyCode.LeftShift) && cooldownTimer <= 0/*La segunda condicion seria tener 100% deenergia cargada*/) {
+		if (Input.GetButton (botonDeDisparo2) && cooldownTimer <= 0/*La segunda condicion seria tener 100% deenergia cargada*/) {
 			cooldownTimer = defenseDelay;
 			shield = Instantiate(shieldPrefab, transform.position, transform.rotation);
 
