@@ -146,7 +146,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 75
+  maxHp: 0
   invulnPeriod: 0.2
+  healthBar: {fileID: 1267961223072532, guid: ff1309cd3496b3349867a2f319789190, type: 2}
 --- !u!212 &212234251022608152
 SpriteRenderer:
   m_ObjectHideFlags: 1

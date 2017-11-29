@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class PlayerLaserCollisionDamage : MonoBehaviour
 {
+	public GameObject player;
     public GameObject effect;
     public int damage;
  
     void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "Enemy")
+	{
+		if(other.tag == "Enemy" || other.tag == "Boss")
         {
-            other.GetComponent<EnemyCollisionDamage>().ReceiveDamage(damage);
+			player.GetComponent<RedShoot> ().addPower (2);
+			other.SendMessage("ReceiveDamage",damage);
             Die();
         }
     }

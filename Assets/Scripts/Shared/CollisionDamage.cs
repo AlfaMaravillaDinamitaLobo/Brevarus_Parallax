@@ -6,19 +6,24 @@ public class CollisionDamage : MonoBehaviour {
 
     public int health = 1;
     public float invulnPeriod = 0;
-    float invulnTimer = 0;
-    int correctLayer;
-    public GameObject effect;
+	public GameObject effect;
+
+    private float invulnTimer = 0;
+	private int correctLayer;
+	private bool alreadyHurt;
+
 
     void Start()
     {
+		alreadyHurt = false;
         correctLayer = gameObject.layer;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player")
+		if(other.tag == "Player" && !alreadyHurt)
         {
+			alreadyHurt = true;
             other.GetComponent<PlayerCollisionDamage>().ReceiveDamage(1);
             health--;
             invulnTimer = invulnPeriod;

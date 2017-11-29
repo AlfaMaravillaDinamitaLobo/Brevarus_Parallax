@@ -6,49 +6,51 @@ public class PlayerCollisionDamage : MonoBehaviour {
 
     public int playerHealth;  
     public float invulnerabilityTimer;  
+    public GameObject deathEffect;
+	public GameObject healthBar;
 
-    float invulnerabilityCounter = 0;  
-    int correctLayer; 
-    
-    public GameObject deathEffect;  
+	private float invulnerabilityCounter = 0;  
+	private int correctLayer; 
+	private int maxHealt;
+	private bool damaged;
 
     void Start()
     {
         correctLayer = gameObject.layer;
+		maxHealt = playerHealth;
+		damaged = false;
     }
 
     void Update()
-    {
-        invulnerabilityCounter -= Time.deltaTime;
-        if (invulnerabilityCounter <= 0)
-        {
-            gameObject.layer = correctLayer;
-        }
-        if (playerHealth <= 0)
-        {
-            Die();
-        }
-    }
+	{
+		invulnerabilityCounter -= Time.deltaTime;
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Enemy" || other.tag == "Boss")
-        {
-            playerHealth--;
-            other.GetComponent<EnemyCollisionDamage>().ReceiveDamage(1);
-        }
+		if (invulnerabilityCounter > 0)
+			damaged = true;
+
+		if (invulnerabilityCounter <= 0) {
+			gameObject.layer = correctLayer;
+			damaged = false;
+		}
+
+        if (playerHealth <= 0)
+            Die();
     }
 
     public void ReceiveDamage(int damage)
     {
-        playerHealth = playerHealth - damage;
-        invulnerabilityCounter = invulnerabilityTimer;
-        gameObject.layer = LayerMask.NameToLayer("Invulnerable");
+		if (!damaged) {
+			healthBar.SendMessage ("TakeDamage", damage);
+			playerHealth = playerHealth - damage;
+			invulnerabilityCounter = invulnerabilityTimer;
+			gameObject.layer = LayerMask.NameToLayer ("Invulnerable");
+		}
     }
 
     public void Recover()
     {
-        playerHealth = Mathf.Min(playerHealth + 6, 12);
+		playerHealth = Mathf.Min(playerHealth + 6, maxHealt);
+		healthBar.SendMessage ("TakeHealth", 6);
     }
 
     void Die()

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 6ddcc3fd6c0f396428d04a6bbdfe101c
+timeCreated: 1511702946
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Intro Rust G
+  fontNames:
+  - Intro Rust G
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

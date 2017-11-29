@@ -122,8 +122,10 @@ MonoBehaviour:
   deathEffect: {fileID: 1627217014336538, guid: dc551c882c6e5fb47a43b203fb8e5c56,
     type: 2}
   powerUp: {fileID: 1432128366966228, guid: fc558b7d252a48f47a823c9c22fa1d0c, type: 2}
+  healthBar: {fileID: 1267961223072532, guid: ff1309cd3496b3349867a2f319789190, type: 2}
   invulnPeriod: 0.1
   health: 7
+  maxHp: 0
 --- !u!114 &114738976920232384
 MonoBehaviour:
   m_ObjectHideFlags: 1
