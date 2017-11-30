@@ -12,9 +12,18 @@ public class PlayerLaserCollisionDamage : MonoBehaviour
 	{
 		if(other.tag == "Enemy" || other.tag == "Boss")
         {
-			player.GetComponent<RedShoot> ().addPower (2);
+			if (player != null) 
+				player.SendMessage ("AddPower", 2);
+			
 			other.SendMessage("ReceiveDamage",damage);
-            Die();
+
+			if (other.tag == "Enemy" && other.GetComponent<EnemyCollisionDamage>().health <= 0f)
+				player.SendMessage ("AddScore", other.GetComponent<StatsEnemy> ().deathPoint);
+
+			if (other.tag == "Boss" && other.GetComponent<MiniBossColisionDmg>().health <= 0f)
+				player.SendMessage ("AddScore", other.GetComponent<StatsEnemy> ().deathPoint);
+
+			Die();
         }
     }
 

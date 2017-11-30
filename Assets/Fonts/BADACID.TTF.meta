@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: a546ca3730c52cd43b49d5693a3bda8f
+timeCreated: 1511966078
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: BadAcid?
+  fontNames:
+  - BadAcid?
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

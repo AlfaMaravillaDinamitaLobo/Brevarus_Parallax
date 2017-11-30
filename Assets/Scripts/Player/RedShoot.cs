@@ -7,13 +7,18 @@ public class RedShoot : MonoBehaviour {
 	public GameObject laserPrefab1;
 	public GameObject laserPrefab2;
 	public GameObject specialPrefab;
-	public GameObject powerBar;
 
     public float fireDelay = 0.25f;
 	public float power = 0f;
 
     private float cooldownTimer = 0;
+	private GameObject guiPlayer;
 	private GameObject specialShoot = null;
+
+	void Start () {
+		guiPlayer = GetComponent<GuiPlayer> ().guiPlayer;
+		power = guiPlayer.GetComponent<StatsPlayer> ().power;
+	}
 
     void Update () {
         cooldownTimer -= Time.deltaTime;
@@ -32,7 +37,7 @@ public class RedShoot : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.LeftShift) && power >= 100f) {
 			specialShoot = Instantiate(specialPrefab, transform.position, transform.rotation);
-			powerBar.GetComponent<PowerBar> ().usePower ();
+			guiPlayer.SendMessage ("UsePower");
 			power = 0;
 
 			specialShoot.transform.position = transform.position;
@@ -40,8 +45,8 @@ public class RedShoot : MonoBehaviour {
 		}
 	}
 
-	public void addPower (float amount) {
+	public void AddPower (float amount) {
 		power += amount;
-		powerBar.GetComponent<PowerBar> ().TakePower (amount);
+		guiPlayer.SendMessage ("TakePower", amount);
 	}
 }

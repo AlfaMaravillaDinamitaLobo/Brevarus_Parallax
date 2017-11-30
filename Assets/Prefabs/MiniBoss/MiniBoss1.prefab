@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 95820351109276386}
   - component: {fileID: 114513859488304350}
   - component: {fileID: 50479122935871158}
+  - component: {fileID: 114540590649590280}
   m_Layer: 9
   m_Name: MiniBoss1
   m_TagString: Boss
@@ -134,6 +135,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d47ebe3b25cd594c993c99fa08e215d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114540590649590280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1771039872375382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ca78a3c4f6a194a98f7e3ab1c9184d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathPoint: 250
 --- !u!114 &114794859022707614
 MonoBehaviour:
   m_ObjectHideFlags: 1

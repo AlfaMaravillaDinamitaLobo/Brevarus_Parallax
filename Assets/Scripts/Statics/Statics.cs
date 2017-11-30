@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Statics {
+public class Statics{
 	public static float limitY()
 	{
 		return 10f;
@@ -11,6 +11,10 @@ public class Statics {
 	public static float limitX()
 	{
 		return 14f;
+	}
+
+	public static Transform TransformOfChildByName(Transform aGameObject, string name){
+		return aGameObject.transform.Find (name);
 	}
 
 	public static bool gameObjectIsVisible(GameObject gameObject){

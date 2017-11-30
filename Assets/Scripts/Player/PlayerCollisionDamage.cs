@@ -3,21 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCollisionDamage : MonoBehaviour {
-
-    public int playerHealth;  
-    public float invulnerabilityTimer;  
+    
     public GameObject deathEffect;
-	public GameObject healthBar;
 
-	private float invulnerabilityCounter = 0;  
-	private int correctLayer; 
-	private int maxHealt;
+	private float maxHealt;
+	private float playerHealth;
+	public float invulnerabilityTimer;
+
 	private bool damaged;
+	private GameObject guiPlayer;
+	private float invulnerabilityCounter = 0;  
+	private int correctLayer;
 
     void Start()
     {
-        correctLayer = gameObject.layer;
-		maxHealt = playerHealth;
+		guiPlayer = GetComponent<GuiPlayer> ().guiPlayer;
+		playerHealth = guiPlayer.GetComponent<StatsPlayer> ().hp;
+		maxHealt = guiPlayer.GetComponent<StatsPlayer> ().maxHp;
+		invulnerabilityTimer = guiPlayer.GetComponent<StatsPlayer>().invulnerabilityTimer;
+
+		correctLayer = gameObject.layer;
 		damaged = false;
     }
 
@@ -40,7 +45,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
     public void ReceiveDamage(int damage)
     {
 		if (!damaged) {
-			healthBar.SendMessage ("TakeDamage", damage);
+			guiPlayer.SendMessage ("TakeDamage", damage);
 			playerHealth = playerHealth - damage;
 			invulnerabilityCounter = invulnerabilityTimer;
 			gameObject.layer = LayerMask.NameToLayer ("Invulnerable");
@@ -50,7 +55,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
     public void Recover()
     {
 		playerHealth = Mathf.Min(playerHealth + 6, maxHealt);
-		healthBar.SendMessage ("TakeHealth", 6);
+		guiPlayer.SendMessage ("TakeHealth", 6);
     }
 
     void Die()
