@@ -62,8 +62,8 @@ GameObject:
   - component: {fileID: 114821724281300718}
   - component: {fileID: 114499247955627850}
   - component: {fileID: 114294353429576758}
-  - component: {fileID: 114745907556817952}
   - component: {fileID: 114093005164601014}
+  - component: {fileID: 114860680062173344}
   m_Layer: 8
   m_Name: Ship2
   m_TagString: Player
@@ -329,6 +329,7 @@ MonoBehaviour:
   specialPrefab: {fileID: 1331346215888066, guid: fb2c6846554fa134ea6728df56b713e5,
     type: 2}
   fireDelay: 0.15
+  power: 0
   botonDeDisparo1: Fire1_P2
   botonDeDisparo2: Fire2_P2
 --- !u!114 &114499247955627850
@@ -342,26 +343,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af24f5309f6d494cb4c2945ac584436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 20
-  invulnerabilityTimer: 1
   deathEffect: {fileID: 1072731098639658, guid: 2fb365177def02c4ca7bf907fde1490c,
     type: 2}
---- !u!114 &114745907556817952
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1692622823999388}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db6d07cf11a7b9a44b0e9301ad53cd95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shieldPrefab: {fileID: 1083018282374902, guid: c9996a3dd882cc84f8ce7e85c240fe14,
-    type: 2}
-  defenseDelay: 5
-  botonDeDisparo1: Fire1_P2
-  botonDeDisparo2: Fire2_P2
+  invulnerabilityTimer: 1
 --- !u!114 &114770211311438206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -388,6 +372,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticalMovement: Vertical_P2
   horizontalMovement: Horizontal_P2
+--- !u!114 &114860680062173344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1692622823999388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2658362ac04924e9e9ef7f2ab69dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guiPlayer: {fileID: 0}
 --- !u!212 &212270818729867524
 SpriteRenderer:
   m_ObjectHideFlags: 1
