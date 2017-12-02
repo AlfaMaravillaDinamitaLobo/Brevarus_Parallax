@@ -8,12 +8,15 @@ public class RedShoot : MonoBehaviour {
 	public GameObject laserPrefab2;
 	public GameObject specialPrefab;
 
-    public float fireDelay = 0.25f;
+    	public float fireDelay = 0.25f;
 	public float power = 0f;
 
-    private float cooldownTimer = 0;
+    	private float cooldownTimer = 0;
 	private GameObject guiPlayer;
 	private GameObject specialShoot = null;
+
+	public string botonDeDisparo1 = "Fire1";
+	public string botonDeDisparo2 = "Fire2";
 
 	void Start () {
 		guiPlayer = GetComponent<GuiPlayer> ().guiPlayer;
@@ -22,20 +25,22 @@ public class RedShoot : MonoBehaviour {
 
     void Update () {
         cooldownTimer -= Time.deltaTime;
-		if(Input.GetButton("Fire1") && cooldownTimer <= 0)
+	if(Input.GetButton(botonDeDisparo1) && cooldownTimer <= 0)
         {
-            cooldownTimer = fireDelay;
+	    	//Debug.Log("Disparo del jugador");
+	    	cooldownTimer = fireDelay;
 
-            Vector3 offset1 = transform.rotation * new Vector3(0.5f, 1f, 0);
-            Vector3 offset2 = transform.rotation * new Vector3(-0.5f, 1f, 0);
-            GameObject laser1 = Instantiate(laserPrefab1, transform.position + offset1, transform.rotation);
-			GameObject laser2 = Instantiate(laserPrefab2, transform.position + offset2, transform.rotation);
+	    	Vector3 offset1 = transform.rotation * new Vector3(0.5f, 1f, 0);
+	    	Vector3 offset2 = transform.rotation * new Vector3(-0.5f, 1f, 0);
+		GameObject laser1 = Instantiate(laserPrefab1, transform.position + offset1, transform.rotation);
+		GameObject laser2 = Instantiate(laserPrefab2, transform.position + offset2, transform.rotation);
 
-			laser1.GetComponent<PlayerLaserCollisionDamage> ().player = gameObject;
-			laser2.GetComponent<PlayerLaserCollisionDamage> ().player = gameObject;
+		laser1.GetComponent<PlayerLaserCollisionDamage> ().player = gameObject;
+		laser2.GetComponent<PlayerLaserCollisionDamage> ().player = gameObject;
         }
 
-		if (Input.GetKey (KeyCode.LeftShift) && power >= 100f) {
+		if (Input.GetButton(botonDeDisparo2) && power >= 100f) {
+			cooldownTimer = fireDelay;
 			specialShoot = Instantiate(specialPrefab, transform.position, transform.rotation);
 			guiPlayer.SendMessage ("UsePower");
 			power = 0;
