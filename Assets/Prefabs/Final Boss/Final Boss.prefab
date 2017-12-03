@@ -318,7 +318,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1381097765449214}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.45189095, y: 18.96998, z: 0}
+  m_LocalPosition: {x: 0.12712474, y: 19.70417, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4811005906327380}
@@ -713,7 +713,7 @@ MonoBehaviour:
   deathEffect: {fileID: 1504395736090156, guid: cd5cbae01724546459f8ce9f3379d271,
     type: 2}
   powerUp: {fileID: 1651468672807288, guid: 642ea5e49faa47443b2efd854e3470bf, type: 2}
-  invulnPeriod: 1
+  invulnPeriod: 0.2
   health: 100
 --- !u!114 &114480772152383748
 MonoBehaviour:

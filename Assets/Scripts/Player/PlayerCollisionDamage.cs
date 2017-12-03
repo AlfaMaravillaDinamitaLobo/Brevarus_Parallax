@@ -32,11 +32,17 @@ public class PlayerCollisionDamage : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Enemy" || other.tag == "Boss")
+        if (other.tag == "Enemy")
         {
             playerHealth--;
             other.GetComponent<EnemyCollisionDamage>().ReceiveDamage(1);
+			Debug.Log ("El jugador colisiona con un enemigo comun");
         }
+		if (other.tag == "Boss") {
+			playerHealth--;
+			other.GetComponent<MiniBossColisionDmg>().ReceiveDamage(1);
+			Debug.Log ("El jugador colisiona con el MiniBoss");
+		}
     }
 
     public void ReceiveDamage(int damage)

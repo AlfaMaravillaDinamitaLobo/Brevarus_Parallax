@@ -15,15 +15,6 @@ public class MiniBossColisionDmg : MonoBehaviour {
 		correctLayer = gameObject.layer;
 	}
 
-	void OnTriggerEnter2D()
-	{
-		Debug.Log("Activado el trigger");
-		health--;
-		invulnTimer = invulnPeriod;
-		gameObject.layer = 10;
-		GetComponent<Animator> ().Play("OnHit");
-	}
-
 	void Update()
 	{
 		invulnTimer -= Time.deltaTime;
@@ -40,6 +31,9 @@ public class MiniBossColisionDmg : MonoBehaviour {
     public void ReceiveDamage(int damage)
     {
         health = health - damage;
+		invulnTimer = invulnPeriod;
+		gameObject.layer = 10;
+		GetComponent<Animator> ().Play("OnHit");
     }
 
 	void Die()

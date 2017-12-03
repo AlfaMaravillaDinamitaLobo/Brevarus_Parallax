@@ -14,6 +14,11 @@ public class PlayerLaserCollisionDamage : MonoBehaviour
             other.GetComponent<EnemyCollisionDamage>().ReceiveDamage(damage);
             Die();
         }
+		if(other.tag == "Boss")
+		{
+			other.GetComponent<MiniBossColisionDmg>().ReceiveDamage(damage);
+			Die();
+		}
     }
 
     void Die()
