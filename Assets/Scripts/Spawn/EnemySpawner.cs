@@ -31,7 +31,7 @@ public class EnemySpawner : MonoBehaviour {
 	void Update () {
 		timer += Time.deltaTime;
 
-		if (timer >= 11.4f && faltaOleada1) {
+		if (timer >= 9f && faltaOleada1) {
 			nivel1.primerOleada (camera);
 			faltaOleada1 = false;
 		}
