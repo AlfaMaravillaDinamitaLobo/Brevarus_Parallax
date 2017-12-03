@@ -141,8 +141,8 @@ MonoBehaviour:
   initialColor: {fileID: 2100000, guid: 659040eef39ce094ca181b72787a266e, type: 2}
   fadeVelocity: 0.5
   appearTime: 0
-  disappearTime: 5.5
-  destroyTime: 7.5
+  disappearTime: 7
+  destroyTime: 9
 --- !u!114 &114299421595063280
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -8,12 +8,12 @@ public class SpecialAttackController : MonoBehaviour {
     {
         if (other.tag == "Enemy")
         {
-            other.GetComponent<EnemyCollisionDamage>().ReceiveDamage(2);
+            other.GetComponent<EnemyCollisionDamage>().ReceiveDamage(15);
             Die();
         }
         if (other.tag == "Boss")
         {
-            other.GetComponent<MiniBossColisionDmg>().ReceiveDamage(2);
+            other.GetComponent<MiniBossColisionDmg>().ReceiveDamage(15);
             Die();
         }
     }

@@ -28,8 +28,8 @@ public class HistoryRelator : MonoBehaviour {
 			alertSpawned = true;
 		}
 
-		if (counter >= 3f && currentHistory == 0) {
-			GameObject aHistory = Instantiate (historyPrefab, new Vector2 (Statics.limitX() - 23.55f, 0f), transform.rotation);
+		if (counter >= 0f && currentHistory == 0) {
+			GameObject aHistory = Instantiate (historyPrefab, new Vector2 (Statics.limitX() - 23.65f, 0f), transform.rotation);
 
 			aHistory.SendMessage("SetText", history.getHistoryN (currentHistory));
 			currentHistory++;
