@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class MiniBossMovement : MonoBehaviour {
 
-public class Enemy2Mov : MonoBehaviour {
+	public float timePerMiniboss = 30f;
 
 	private float counter = 0f;
 	private float velocidadMovimiento = 5f;
@@ -13,12 +14,12 @@ public class Enemy2Mov : MonoBehaviour {
 	void Update () {
 
 		counter += Time.deltaTime;
-		if (counter >= Statics.TimePerWave ()) {
+		if (counter >= timePerMiniboss) {
 			GetComponent<FrontMovement> ().enabled = true;
-			GetComponent<FrontMovement> ().maxSpeed = 15f;
+			GetComponent<FrontMovement> ().maxSpeed = -15f;
 			Destroy (gameObject, 2);
 
-			GetComponent<Enemy2Mov> ().enabled = false;
+			GetComponent<MiniBossMovement> ().enabled = false;
 		}
 
 		if (llegoAlFinal) {

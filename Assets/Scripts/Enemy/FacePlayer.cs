@@ -4,35 +4,40 @@ using UnityEngine;
 
 public class FacePlayer : MonoBehaviour {
 
-    float rotSpeed = 90f;
-    Transform player;
+    private float rotSpeed = 90f;
+	private GameObject[] players = new GameObject[2];
 
 	void Update () {
-		if(player == null)
-        {
-            GameObject obj = GameObject.Find("Ship");
+		players = Statics.FindPlayers();
 
-            if(obj != null)
-            {
-                player = obj.transform;
-            }
-        }
+		if (players.Length != 0) {
+			GameObject player = FindNearest ();
 
-        if(player == null)
-        {
-            return; 
-        }
+			Vector3 dir = player.transform.position - transform.position;
+			//Este vector indica la distancia a la que está player
 
-        Vector3 dir = player.position - transform.position;
-        //Este vector indica la distancia a la que está player
+			dir.Normalize ();
+			//Si antes dir era (-10, 0, 0), lo transforma en (-1, 0, 0)
 
-        dir.Normalize();
-        //Si antes dir era (-10, 0, 0), lo transforma en (-1, 0, 0)
-
-        float zAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
-        Quaternion desiredRotation = Quaternion.Euler(0, 0, zAngle);
-        float allowedRotation = rotSpeed * Time.deltaTime;
-        
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRotation, allowedRotation);
+			float zAngle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg - 90;
+			Quaternion desiredRotation = Quaternion.Euler (0, 0, zAngle);
+			float allowedRotation = rotSpeed * Time.deltaTime;
+	        
+			transform.rotation = Quaternion.RotateTowards (transform.rotation, desiredRotation, allowedRotation);
+		}
     }
+
+	private GameObject FindNearest(){
+		GameObject returnPlayer = players [0];
+
+		if (players.Length == 2) {
+			float distPlayer1 = Vector3.Distance(players [0].transform.position,transform.position);
+			float distPlayer2 = Vector3.Distance(players [1].transform.position,transform.position);
+
+			if (distPlayer2 < distPlayer1)
+				returnPlayer = players [1];
+		}
+
+		return returnPlayer;
+	}
 }

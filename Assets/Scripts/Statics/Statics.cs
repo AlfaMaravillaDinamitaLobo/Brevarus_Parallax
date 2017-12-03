@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Statics{
+	public static float TimePerWave(){ return 15f;}
+
 	public static float limitY()
 	{
 		return 10f;
@@ -11,6 +13,10 @@ public class Statics{
 	public static float limitX()
 	{
 		return 14f;
+	}
+
+	public static GameObject[] FindPlayers(){
+		return GameObject.FindGameObjectsWithTag("Player");
 	}
 
 	public static Transform TransformOfChildByName(Transform aGameObject, string name){
@@ -36,6 +42,14 @@ public class Statics{
 	public static GameObject FindPlayerOne(){
 
 		return GameObject.Find("Ship");
+	}
+
+	public static bool NoHayEnemigos(){
+		return GameObject.FindGameObjectsWithTag ("Enemy").Length == 0 && GameObject.FindGameObjectsWithTag ("Boss").Length == 0;
+	}
+
+	public static bool NoHayHistorias(){
+		return GameObject.FindGameObjectsWithTag ("History").Length == 0;
 	}
 }
 

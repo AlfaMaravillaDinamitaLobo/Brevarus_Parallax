@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114540634823046862}
   - component: {fileID: 114139370868826710}
   - component: {fileID: 114346704449507144}
+  - component: {fileID: 114866327008558738}
   m_Layer: 9
   m_Name: Enemy 4
   m_TagString: Enemy
@@ -141,6 +142,18 @@ MonoBehaviour:
   invulnPeriod: 0.1
   health: 20
   maxHp: 0
+--- !u!114 &114866327008558738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1477343783842148}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905cf80829edf5e4aa048a48a2368978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 1
 --- !u!212 &212871650045783714
 SpriteRenderer:
   m_ObjectHideFlags: 1

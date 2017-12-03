@@ -11,6 +11,7 @@ public class RandomMovement : MonoBehaviour {
     bool llegoAlFinalX;
     bool llegoAlFinalY;
 
+	private float counter;
     private float tChange = 0; 
     private float randomX;
     private float randomY;
@@ -18,6 +19,15 @@ public class RandomMovement : MonoBehaviour {
      
     void Update()
     {
+		counter += Time.deltaTime;
+		if (counter >= Statics.TimePerWave ()) {
+			GetComponent<FrontMovement> ().enabled = true;
+			GetComponent<FrontMovement> ().maxSpeed = 15f;
+			Destroy (gameObject, 2);
+
+			GetComponent<RandomMovement> ().enabled = false;
+		}
+
         ControlarBordesX();
         ControlarBordesY();
         if (Time.time >= tChange)

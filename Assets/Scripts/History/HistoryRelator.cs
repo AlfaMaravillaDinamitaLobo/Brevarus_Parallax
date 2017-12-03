@@ -4,49 +4,71 @@ using UnityEngine;
 
 public class HistoryRelator : MonoBehaviour {
 
-	private float counter;
-	private bool alertSpawned;
 	private HistoryLevel1 history;
-	private int currentHistory;
+	private EnemySpawner enemySpawner;
+	private bool introSpawn;
+	private bool finalSpawn;
+	private bool finalLevel;
+
+	public int currentHistory;
+	public bool alertSpawned;
 
 	public GameObject historyPrefab;
 	public GameObject alert;
+	public GameObject introScreen;
+	public GameObject finalScreen;
 
 	void Start(){
+		introSpawn = false;
+		finalSpawn = false;
 		history = new HistoryLevel1 ();
+		enemySpawner = GetComponent<EnemySpawner> ();
 		alertSpawned = false;
-		counter = 0f;
 		currentHistory = 0;
 	}
 
 	void Update () {
-		counter += Time.deltaTime;
 
-		if (counter >= 54f && !alertSpawned) {
-			Instantiate (alert, new Vector2 (0f,0f), Quaternion.Euler(new Vector3(0f,0f,30f)));
-
-			alertSpawned = true;
+		if (Time.time >= 0 && !introSpawn) {
+			Instantiate (introScreen, new Vector2(0f,0f), transform.rotation);
+			introSpawn = true;
 		}
 
-		if (counter >= 2f && currentHistory == 0) {
+		if (Time.time >= 2 && currentHistory == 0) {
 			GameObject aHistory = Instantiate (historyPrefab, new Vector2 (Statics.limitX() - 23.65f, 0f), transform.rotation);
 
 			aHistory.SendMessage("SetText", history.getHistoryN (currentHistory));
 			currentHistory++;
 		}
 
-		if (counter >= 55f && currentHistory == 1) {
+		if (!enemySpawner.faltaOleada2 && currentHistory == 1 && Statics.NoHayEnemigos()) {
 			GameObject aHistory = Instantiate (historyPrefab, new Vector2 (Statics.limitX() - 23.55f, 0f), transform.rotation);
 
 			aHistory.SendMessage("SetText", history.getHistoryN (currentHistory));
 			currentHistory++;
 		}
 
-		if (counter >= 75f && currentHistory == 2) {
+		if (!enemySpawner.faltaOleada3 && Statics.NoHayEnemigos() && !alertSpawned) {
+			Instantiate (alert, new Vector2 (0f,0f), Quaternion.Euler(new Vector3(0f,0f,30f)));
+
+			alertSpawned = true;
+		}
+
+		if (!enemySpawner.faltaBoss && Statics.NoHayEnemigos() && currentHistory == 2) {
 			GameObject aHistory = Instantiate (historyPrefab, new Vector2 (Statics.limitX() - 23.55f, 0f), transform.rotation);
 
 			aHistory.SendMessage("SetText", history.getHistoryN (currentHistory));
 			currentHistory++;
+		}
+
+		if (!finalSpawn && currentHistory == 3 && Statics.NoHayHistorias()) {
+			Instantiate (introScreen, new Vector2(0f,0f), transform.rotation);
+			finalLevel = true;
+			introSpawn = true;
+		}
+
+		if (finalLevel) {
+			GetComponent<AudioSource> ().volume -= Time.deltaTime;
 		}
 	}
 }
