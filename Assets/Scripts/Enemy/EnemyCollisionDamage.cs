@@ -12,16 +12,10 @@ public class EnemyCollisionDamage : MonoBehaviour {
     int correctLayer;
     public int health;
 
-	private SpriteRenderer sprite;
-	private int colorTimer;
-	private int colorCounter;
-
     void Start()
     {
         correctLayer = gameObject.layer;
         invulnTimer = 0;
-		sprite = this.GetComponent<SpriteRenderer> ();
-		colorTimer = 7;
     }
 
     void Update()
@@ -35,18 +29,11 @@ public class EnemyCollisionDamage : MonoBehaviour {
         {
             Die();
         }
-		colorCounter--;
-		if (colorCounter < 0) {
-			sprite.color = Color.white;
-		}
     }
 
     public void ReceiveDamage(int damage)
     {
         health = health - damage;
-		Color newColor = new Color(1f, 0f, 0f, 0.5f);
-		sprite.color = newColor;
-		colorCounter = colorTimer;
         invulnTimer = invulnPeriod;
         gameObject.layer = 10;
     }

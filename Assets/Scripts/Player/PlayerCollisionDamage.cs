@@ -38,10 +38,15 @@ public class PlayerCollisionDamage : MonoBehaviour {
             other.GetComponent<EnemyCollisionDamage>().ReceiveDamage(1);
 			Debug.Log ("El jugador colisiona con un enemigo comun");
         }
-		if (other.tag == "Boss") {
+		if (other.tag == "MiniBoss") {
 			playerHealth--;
 			other.GetComponent<MiniBossColisionDmg>().ReceiveDamage(1);
 			Debug.Log ("El jugador colisiona con el MiniBoss");
+		}
+		if (other.tag == "Boss") {
+			playerHealth--;
+			other.GetComponent<BossCollisionDamage>().ReceiveDamage(1);
+			Debug.Log ("El jugador colisiona con el Boss");
 		}
     }
 
