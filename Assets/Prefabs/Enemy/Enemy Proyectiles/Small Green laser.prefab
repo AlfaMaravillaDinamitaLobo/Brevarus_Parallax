@@ -92,7 +92,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 45f0dff47052aa740860bd65bd5d4915, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -187,6 +187,7 @@ MonoBehaviour:
   health: 1
   invulnPeriod: 0
   effect: {fileID: 1710498715457572, guid: 57aa2dc0aab4ccc4eae14b31eebecd94, type: 2}
+  damage: 1
 --- !u!114 &114461449925653022
 MonoBehaviour:
   m_ObjectHideFlags: 1

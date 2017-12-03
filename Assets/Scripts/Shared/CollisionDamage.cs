@@ -7,6 +7,7 @@ public class CollisionDamage : MonoBehaviour {
     public int health = 1;
     public float invulnPeriod = 0;
 	public GameObject effect;
+	public int damage;
 
     private float invulnTimer = 0;
 	private int correctLayer;
@@ -24,7 +25,7 @@ public class CollisionDamage : MonoBehaviour {
 		if(other.tag == "Player" && !alreadyHurt)
         {
 			alreadyHurt = true;
-            other.GetComponent<PlayerCollisionDamage>().ReceiveDamage(1);
+			other.GetComponent<PlayerCollisionDamage>().ReceiveDamage(damage);
             health--;
             invulnTimer = invulnPeriod;
             gameObject.layer = 10;

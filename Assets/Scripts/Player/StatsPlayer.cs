@@ -14,7 +14,6 @@ public class StatsPlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = Statics.FindPlayerOne ();
 		score = 0;
 	}
 

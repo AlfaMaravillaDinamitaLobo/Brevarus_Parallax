@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 70102780301279416}
   m_Layer: 9
   m_Name: beams_31
-  m_TagString: Red
+  m_TagString: Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,6 +85,7 @@ MonoBehaviour:
   health: 1
   invulnPeriod: 0
   effect: {fileID: 1504395736090156, guid: cd5cbae01724546459f8ce9f3379d271, type: 2}
+  damage: 1
 --- !u!114 &114946760823585312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,7 +130,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300062, guid: 6201070df2c94ff41b9cbc9918e18a56, type: 3}
+  m_Sprite: {fileID: 21300036, guid: 6201070df2c94ff41b9cbc9918e18a56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1

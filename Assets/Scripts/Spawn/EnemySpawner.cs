@@ -31,22 +31,22 @@ public class EnemySpawner : MonoBehaviour {
 	void Update () {
 		timer += Time.deltaTime;
 
-		if (timer >= 5f && faltaOleada1) {
+		if (timer >= 10f && faltaOleada1) {
 			nivel1.primerOleada (camera);
 			faltaOleada1 = false;
 		}
 
-		if (timer >= 20f && faltaOleada2) {
+		if (timer >= 25f && faltaOleada2) {
 			nivel1.segundaOleada (camera);
 			faltaOleada2 = false;
 		}
 
-		if (timer >= 30f && faltaOleada3) {
+		if (timer >= 35f && faltaOleada3) {
 			nivel1.tercerOleada (camera);
 			faltaOleada3 = false;
 		}
 
-		if (timer >= 60f && faltaBoss) {
+		if (timer >= 65f && faltaBoss) {
 			nivel1.spawnBoss (camera);
 			faltaBoss = false;
 		}

@@ -122,7 +122,7 @@ MonoBehaviour:
   bulletOffset2: {x: -1.45, y: 1.95, z: 0}
   bulletPrefab1: {fileID: 1447060114647580, guid: 0ce05e5c270042c4bb2fda2462d731b7,
     type: 2}
-  bulletPrefab2: {fileID: 1447060114647580, guid: 0ce05e5c270042c4bb2fda2462d731b7,
+  bulletPrefab2: {fileID: 1775708856790028, guid: ad8f4faad09492c479613709059e17b0,
     type: 2}
   fireDelay: 0.5
 --- !u!114 &114528562743876512
@@ -164,7 +164,7 @@ MonoBehaviour:
   powerUp: {fileID: 1651468672807288, guid: 642ea5e49faa47443b2efd854e3470bf, type: 2}
   healthBar: {fileID: 1267961223072532, guid: ff1309cd3496b3349867a2f319789190, type: 2}
   invulnPeriod: 0.1
-  health: 20
+  health: 50
   maxHp: 0
 --- !u!212 &212104007951859970
 SpriteRenderer:
