@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114053303356681376}
   - component: {fileID: 114679091566096002}
   - component: {fileID: 114213904510656226}
-  - component: {fileID: 82393973018619892}
+  - component: {fileID: 82495827138487438}
   m_Layer: 9
   m_Name: Red Round Laser (S)
   m_TagString: Red
@@ -81,19 +81,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.04
---- !u!82 &82393973018619892
+--- !u!82 &82495827138487438
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1073998930674960}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 45f0dff47052aa740860bd65bd5d4915, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
-  m_Pitch: 0.5
+  m_Volume: 1
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0

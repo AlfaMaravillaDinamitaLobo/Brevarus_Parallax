@@ -16,6 +16,7 @@ TagManager:
   - Red
   - Green
   - Boss
+  - MiniBoss
   layers:
   - Default
   - TransparentFX

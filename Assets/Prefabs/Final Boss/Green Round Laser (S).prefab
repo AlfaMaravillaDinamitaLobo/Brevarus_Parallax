@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114698953642448274}
   - component: {fileID: 114041297030987472}
   - component: {fileID: 114789752799153230}
-  - component: {fileID: 82784165789833976}
+  - component: {fileID: 82741424008244566}
   m_Layer: 9
   m_Name: Green Round Laser (S)
   m_TagString: Green
@@ -81,19 +81,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.04
---- !u!82 &82784165789833976
+--- !u!82 &82741424008244566
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1317156519551454}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 45f0dff47052aa740860bd65bd5d4915, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
-  m_Pitch: 0.5
+  m_Volume: 1
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
