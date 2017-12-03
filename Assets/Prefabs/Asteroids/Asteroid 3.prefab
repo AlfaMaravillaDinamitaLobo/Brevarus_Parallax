@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 95445347156794764}
   - component: {fileID: 58335461992175496}
   - component: {fileID: 114261495545227332}
-  m_Layer: 0
+  - component: {fileID: 114106669361043800}
+  m_Layer: 9
   m_Name: Asteroid 3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1122774315935690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8, y: -8.8, z: 0}
+  m_LocalPosition: {x: -12.25486, y: -5.577683, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,6 +76,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114106669361043800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1122774315935690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3164ff650a3db458344431e70ec0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathEffect: {fileID: 1144548320260124, guid: 9ac80094d0458164f89c41f467ac0ad0,
+    type: 2}
+  powerUp: {fileID: 1432128366966228, guid: fc558b7d252a48f47a823c9c22fa1d0c, type: 2}
+  invulnPeriod: 0
+  health: 5
 --- !u!114 &114261495545227332
 MonoBehaviour:
   m_ObjectHideFlags: 1

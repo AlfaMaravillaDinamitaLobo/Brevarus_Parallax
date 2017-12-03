@@ -7,6 +7,8 @@ public class ClawShooting : MonoBehaviour {
 	public GameObject redShoot;
 	public GameObject greenShoot;
 	private bool readyToShoot;
+	public bool isLeft;
+	private float xOffset;
 
 	public int colorRate;
 	public int colorCounter;
@@ -20,6 +22,10 @@ public class ClawShooting : MonoBehaviour {
 		fireCounter = fireRate;
 		colorCounter = colorRate;
 		firingRed = true;
+		xOffset = 1.8f;
+		if (!isLeft) {
+			xOffset = -xOffset;
+		}
 	}
 
 	void Update () {
@@ -45,7 +51,7 @@ public class ClawShooting : MonoBehaviour {
 	}
 
 	public void Shoot(GameObject proyectile){
-		Vector3 position = transform.position + new Vector3 (0.5f, 0.0f, 0.0f);
+		Vector3 position = transform.position + new Vector3 (xOffset, 0.0f, 0.0f);
 		Instantiate (proyectile, position, transform.rotation);
 	}
 
