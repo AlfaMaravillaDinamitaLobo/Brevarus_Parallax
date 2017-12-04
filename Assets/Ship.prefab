@@ -327,9 +327,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab487b2788d3d94a95c7aabead6c895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab1: {fileID: 1993149098620072, guid: 0de534fdcdf91e1498535b802976d259,
+  laserPrefab1: {fileID: 1973316735309928, guid: 875145570b6d256459197ffdccf47168,
     type: 2}
-  laserPrefab2: {fileID: 1993149098620072, guid: 0de534fdcdf91e1498535b802976d259,
+  laserPrefab2: {fileID: 1973316735309928, guid: 875145570b6d256459197ffdccf47168,
     type: 2}
   specialPrefab: {fileID: 1331346215888066, guid: fb2c6846554fa134ea6728df56b713e5,
     type: 2}

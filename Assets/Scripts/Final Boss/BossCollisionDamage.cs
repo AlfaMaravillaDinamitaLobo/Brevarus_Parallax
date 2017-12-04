@@ -70,6 +70,7 @@ public class BossCollisionDamage : MonoBehaviour {
 	public void BodyCheck(){
 		if (destroyedParts >= 5) {
 			canReceiveDamage = true;
+			this.gameObject.GetComponent<BodyShooting> ().BeginShooting();
 		}
 	}
 

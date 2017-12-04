@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 114698638128030810}
   - component: {fileID: 114649983068937322}
   - component: {fileID: 82545081567683146}
+  - component: {fileID: 114369461334917482}
   m_Layer: 9
   m_Name: Final Boss
   m_TagString: Boss
@@ -915,7 +916,7 @@ MonoBehaviour:
   deathEffect: {fileID: 1504395736090156, guid: cd5cbae01724546459f8ce9f3379d271,
     type: 2}
   invulnPeriod: 0.2
-  health: 70
+  health: 10
   isBody: 0
 --- !u!114 &114119901054320724
 MonoBehaviour:
@@ -931,7 +932,7 @@ MonoBehaviour:
   deathEffect: {fileID: 1504395736090156, guid: cd5cbae01724546459f8ce9f3379d271,
     type: 2}
   invulnPeriod: 0.2
-  health: 50
+  health: 10
   isBody: 0
 --- !u!114 &114159489330574410
 MonoBehaviour:
@@ -947,7 +948,7 @@ MonoBehaviour:
   deathEffect: {fileID: 1504395736090156, guid: cd5cbae01724546459f8ce9f3379d271,
     type: 2}
   invulnPeriod: 0.2
-  health: 50
+  health: 10
   isBody: 0
 --- !u!114 &114181606335577264
 MonoBehaviour:
@@ -1018,7 +1019,7 @@ MonoBehaviour:
   deathEffect: {fileID: 1504395736090156, guid: cd5cbae01724546459f8ce9f3379d271,
     type: 2}
   invulnPeriod: 0.2
-  health: 50
+  health: 10
   isBody: 0
 --- !u!114 &114282833661286298
 MonoBehaviour:
@@ -1034,8 +1035,24 @@ MonoBehaviour:
   deathEffect: {fileID: 1504395736090156, guid: cd5cbae01724546459f8ce9f3379d271,
     type: 2}
   invulnPeriod: 0.2
-  health: 50
+  health: 10
   isBody: 0
+--- !u!114 &114369461334917482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1381097765449214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b082e37b3544c541b9f4fa68e47265a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redShot: {fileID: 1504798882967456, guid: c265359f3eafa70469bfa6fee95b75c9, type: 2}
+  greenShot: {fileID: 1716950727537678, guid: f19d7ea4cdcbf12498a47e32ebae9a3b, type: 2}
+  blueShot: {fileID: 1716950727537678, guid: f19d7ea4cdcbf12498a47e32ebae9a3b, type: 2}
+  fireRate: 7
+  colorRate: 15
 --- !u!114 &114370233821358552
 MonoBehaviour:
   m_ObjectHideFlags: 1
