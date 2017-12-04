@@ -9,12 +9,16 @@ public class PlayerCollisionDamage : MonoBehaviour {
 	private float maxHealt;
 	private float playerHealth;
 	public float invulnerabilityTimer;
-	private int lifes;
+	public int lifes;
 
 	private bool damaged;
 	private GameObject guiPlayer;
 	private float invulnerabilityCounter = 0;  
 	private int correctLayer;
+
+	public bool disabled;
+	public float restartTimer;
+	public float restartCounter;
 
     void Start()
     {
@@ -26,6 +30,9 @@ public class PlayerCollisionDamage : MonoBehaviour {
 
 		correctLayer = gameObject.layer;
 		damaged = false;
+
+		disabled = false;
+		restartCounter = restartTimer;
     }
 
     void Update()
@@ -40,9 +47,22 @@ public class PlayerCollisionDamage : MonoBehaviour {
 			damaged = false;
 		}
 
-		if (playerHealth <= 0) {
+		if (lifes > 0 && playerHealth <= 0 && !disabled) {
+			Defeat ();
+		}
+
+		if (lifes <= 0 && playerHealth <= 0 && !disabled) {
             Die();
         }
+		if (disabled) {
+			restartCounter--;
+		}
+		if (restartCounter <= 0) {
+			disabled = false;
+			restartCounter = restartTimer;
+			Revive ();
+		}
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -82,10 +102,43 @@ public class PlayerCollisionDamage : MonoBehaviour {
 		lifes++;
 	}
 
+	public void Defeat(){
+		Instantiate(deathEffect, transform.position, transform.rotation);
+		this.gameObject.GetComponent<PlayerMovement> ().enabled = false;
+		this.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
+		this.gameObject.GetComponent<RedShoot> ().enabled = false;
+		this.gameObject.layer = 8;
+		this.gameObject.tag = "Untagged";
+		this.gameObject.GetComponentInChildren<ShieldController> ().enabled = false;
+		SpriteRenderer[] list = this.gameObject.GetComponentsInChildren<SpriteRenderer> ();
+		foreach (SpriteRenderer renderer in list)
+		{
+			renderer.enabled = false;  
+		}
+		disabled = true;
+		restartCounter = restartTimer;
+		lifes--;
+	}
+
+	public void Revive(){
+		this.gameObject.GetComponent<PlayerMovement> ().enabled = true;
+		this.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
+		this.gameObject.GetComponent<RedShoot> ().enabled = true;
+		this.gameObject.layer = 6;
+		this.gameObject.tag = "Player";
+		this.gameObject.GetComponentInChildren<ShieldController> ().enabled = true;
+		SpriteRenderer[] list = this.gameObject.GetComponentsInChildren<SpriteRenderer> ();
+		foreach (SpriteRenderer renderer in list)
+		{
+			renderer.enabled = true;  
+		}
+		playerHealth = maxHealt;
+		guiPlayer.SendMessage ("TakeHealth", maxHealt);
+	}
+
     void Die()
     {
         Instantiate(deathEffect, transform.position, transform.rotation);
-		lifes--;
         Destroy(gameObject);
     }
 }

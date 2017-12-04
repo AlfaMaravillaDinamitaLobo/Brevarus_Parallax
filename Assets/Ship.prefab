@@ -303,6 +303,10 @@ MonoBehaviour:
   deathEffect: {fileID: 1072731098639658, guid: 2fb365177def02c4ca7bf907fde1490c,
     type: 2}
   invulnerabilityTimer: 1
+  lifes: 0
+  disabled: 0
+  restartTimer: 120
+  restartCounter: 0
 --- !u!114 &114366693849944662
 MonoBehaviour:
   m_ObjectHideFlags: 1
