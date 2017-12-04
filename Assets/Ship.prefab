@@ -78,8 +78,8 @@ GameObject:
   - component: {fileID: 114582109108257664}
   - component: {fileID: 114300740962065404}
   - component: {fileID: 114375209311977512}
-  - component: {fileID: 114698065452290642}
   - component: {fileID: 114918019985663248}
+  - component: {fileID: 114979516399832376}
   m_Layer: 8
   m_Name: Ship
   m_TagString: Player
@@ -300,10 +300,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af24f5309f6d494cb4c2945ac584436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 20
-  invulnerabilityTimer: 1
   deathEffect: {fileID: 1072731098639658, guid: 2fb365177def02c4ca7bf907fde1490c,
     type: 2}
+  invulnerabilityTimer: 1
 --- !u!114 &114366693849944662
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -316,6 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTimer: 0
+  modeChange: ModeChange_P1
 --- !u!114 &114375209311977512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -334,6 +334,9 @@ MonoBehaviour:
   specialPrefab: {fileID: 1331346215888066, guid: fb2c6846554fa134ea6728df56b713e5,
     type: 2}
   fireDelay: 0.15
+  power: 0
+  botonDeDisparo1: Fire1
+  botonDeDisparo2: Fire2
 --- !u!114 &114524348619122532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -345,6 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83f01761772098945bb00ef2874a1d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mode: 
 --- !u!114 &114582109108257664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -356,20 +360,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca115601823acce448af7d2e8a50b490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114698065452290642
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1650004930482554}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db6d07cf11a7b9a44b0e9301ad53cd95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shieldPrefab: {fileID: 1083018282374902, guid: c9996a3dd882cc84f8ce7e85c240fe14,
-    type: 2}
-  defenseDelay: 5
+  verticalMovement: Vertical
+  horizontalMovement: Horizontal
 --- !u!114 &114918019985663248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -381,6 +373,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22be5d742fc4cb469896355d8f237c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114979516399832376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1650004930482554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2658362ac04924e9e9ef7f2ab69dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guiPlayer: {fileID: 0}
 --- !u!212 &212350577770746672
 SpriteRenderer:
   m_ObjectHideFlags: 1

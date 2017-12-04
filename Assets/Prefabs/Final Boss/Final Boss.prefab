@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 114649983068937322}
   - component: {fileID: 82545081567683146}
   - component: {fileID: 114369461334917482}
+  - component: {fileID: 114163827633704110}
   m_Layer: 9
   m_Name: Final Boss
   m_TagString: Boss
@@ -950,6 +951,18 @@ MonoBehaviour:
   invulnPeriod: 0.2
   health: 10
   isBody: 0
+--- !u!114 &114163827633704110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1381097765449214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ca78a3c4f6a194a98f7e3ab1c9184d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathPoint: 10
 --- !u!114 &114181606335577264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1050,8 +1063,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redShot: {fileID: 1504798882967456, guid: c265359f3eafa70469bfa6fee95b75c9, type: 2}
   greenShot: {fileID: 1716950727537678, guid: f19d7ea4cdcbf12498a47e32ebae9a3b, type: 2}
-  blueShot: {fileID: 1716950727537678, guid: f19d7ea4cdcbf12498a47e32ebae9a3b, type: 2}
   fireRate: 7
+  isRed: 0
   colorRate: 15
 --- !u!114 &114370233821358552
 MonoBehaviour:

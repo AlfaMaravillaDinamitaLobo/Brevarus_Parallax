@@ -38,7 +38,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
 			damaged = false;
 		}
 
-        if (playerHealth <= 0)
+		if (playerHealth <= 0) {
             Die();
         }
     }
