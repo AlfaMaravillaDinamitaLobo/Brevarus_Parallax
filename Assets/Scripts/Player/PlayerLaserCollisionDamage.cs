@@ -10,7 +10,7 @@ public class PlayerLaserCollisionDamage : MonoBehaviour
  
     void OnTriggerEnter2D(Collider2D other)
 	{
-		if(other.tag == "Enemy" || other.tag == "Boss")
+		if(other.tag == "Enemy")
         {
 			if (player != null) 
 				player.SendMessage ("AddPower", 2);
