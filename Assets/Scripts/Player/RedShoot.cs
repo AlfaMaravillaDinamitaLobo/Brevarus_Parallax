@@ -7,11 +7,13 @@ public class RedShoot : MonoBehaviour {
 	public GameObject laserPrefab1;
 	public GameObject laserPrefab2;
 	public GameObject specialPrefab;
+	public GameObject specialShield;
 
     public float fireDelay = 0.25f;
 	public float power = 0f;
 	public float multipleShootTimer;
 	private float multipleShootCounter;
+	private bool shieldOn;
 
     private float cooldownTimer = 0;
 	private GameObject guiPlayer;
@@ -20,12 +22,14 @@ public class RedShoot : MonoBehaviour {
 
 	public string botonDeDisparo1 = "Fire1";
 	public string botonDeDisparo2 = "Fire2";
+	public string botonDeEscudo = "Fire3";
 
 	void Start () {
 		guiPlayer = GetComponent<GuiPlayer> ().guiPlayer;
 		power = guiPlayer.GetComponent<StatsPlayer> ().power;
 		multipleShoot = false;
 		multipleShootCounter = 0;
+		shieldOn = false;
 	}
 
     void Update () {
@@ -42,6 +46,12 @@ public class RedShoot : MonoBehaviour {
 			laser1.GetComponent<PlayerLaserCollisionDamage> ().player = gameObject;
 			laser2.GetComponent<PlayerLaserCollisionDamage> ().player = gameObject;
         }
+
+		if (Input.GetButton(botonDeEscudo) && shieldOn) {
+			
+			Instantiate(specialShield, transform.position, transform.rotation);
+			shieldOn = false;
+		}
 
 		if (Input.GetButton(botonDeDisparo2) && power >= 100f) {
 			cooldownTimer = fireDelay;
@@ -84,6 +94,6 @@ public class RedShoot : MonoBehaviour {
 	}
 
 	public void ActivateShield(){
-
+		shieldOn = true;
 	}
 }
