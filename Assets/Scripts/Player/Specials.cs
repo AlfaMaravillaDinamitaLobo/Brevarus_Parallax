@@ -12,7 +12,7 @@ public class Specials : MonoBehaviour {
 		}
 		if(tag == "Life")
 		{
-			//gameObject.GetComponent<PlayerCollisionDamage>().ExtraLife();
+			gameObject.GetComponent<PlayerCollisionDamage>().ExtraLife();
 		}
 		if(tag == "Health")
 		{

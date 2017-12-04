@@ -9,6 +9,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
 	private float maxHealt;
 	private float playerHealth;
 	public float invulnerabilityTimer;
+	private int lifes;
 
 	private bool damaged;
 	private GameObject guiPlayer;
@@ -21,6 +22,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
 		playerHealth = guiPlayer.GetComponent<StatsPlayer> ().hp;
 		maxHealt = guiPlayer.GetComponent<StatsPlayer> ().maxHp;
 		invulnerabilityTimer = guiPlayer.GetComponent<StatsPlayer>().invulnerabilityTimer;
+		lifes = 3;
 
 		correctLayer = gameObject.layer;
 		damaged = false;
@@ -70,6 +72,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
 			playerHealth = playerHealth - damage;
 			invulnerabilityCounter = invulnerabilityTimer;
 			gameObject.layer = LayerMask.NameToLayer ("Invulnerable");
+			Debug.Log (playerHealth);
 		}
     }
 
@@ -79,9 +82,14 @@ public class PlayerCollisionDamage : MonoBehaviour {
 		guiPlayer.SendMessage ("TakeHealth", 6);
     }
 
+	public void ExtraLife(){
+		lifes++;
+	}
+
     void Die()
     {
         Instantiate(deathEffect, transform.position, transform.rotation);
+		lifes--;
         Destroy(gameObject);
     }
 }
