@@ -49,19 +49,16 @@ public class PlayerCollisionDamage : MonoBehaviour {
     {
         if (other.tag == "Enemy")
         {
-            playerHealth--;
+			this.ReceiveDamage(1);
             other.GetComponent<EnemyCollisionDamage>().ReceiveDamage(1);
-			Debug.Log ("El jugador colisiona con un enemigo comun");
         }
 		if (other.tag == "MiniBoss") {
-			playerHealth--;
+			this.ReceiveDamage(1);
 			other.GetComponent<MiniBossColisionDmg>().ReceiveDamage(1);
-			Debug.Log ("El jugador colisiona con el MiniBoss");
 		}
 		if (other.tag == "Boss") {
-			playerHealth--;
+			this.ReceiveDamage(1);
 			other.GetComponent<BossCollisionDamage>().ReceiveDamage(1);
-			Debug.Log ("El jugador colisiona con el Boss");
 		}
     }
 
@@ -72,7 +69,6 @@ public class PlayerCollisionDamage : MonoBehaviour {
 			playerHealth = playerHealth - damage;
 			invulnerabilityCounter = invulnerabilityTimer;
 			gameObject.layer = LayerMask.NameToLayer ("Invulnerable");
-			Debug.Log (playerHealth);
 		}
     }
 
