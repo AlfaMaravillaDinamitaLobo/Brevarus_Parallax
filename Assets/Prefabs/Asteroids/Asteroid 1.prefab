@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1867164889149108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.452823, y: -0.513055, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -90,8 +90,10 @@ MonoBehaviour:
   deathEffect: {fileID: 1144548320260124, guid: 9ac80094d0458164f89c41f467ac0ad0,
     type: 2}
   powerUp: {fileID: 1432128366966228, guid: fc558b7d252a48f47a823c9c22fa1d0c, type: 2}
+  healthBar: {fileID: 1267961223072532, guid: ff1309cd3496b3349867a2f319789190, type: 2}
   invulnPeriod: 0
-  health: 7
+  health: 6
+  maxHp: 7
 --- !u!114 &114753037816407936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,7 +138,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f27ffb5c6d98804429ed02689c660502, type: 3}
+  m_Sprite: {fileID: 21300040, guid: f27ffb5c6d98804429ed02689c660502, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
