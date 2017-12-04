@@ -8,7 +8,7 @@ public class Specials : MonoBehaviour {
 	{
 		if(tag == "Bullet")
 		{
-			//gameObject.GetComponent<RedShoot>().SpecialFire();
+			gameObject.GetComponent<RedShoot>().MultipleShoot();
 		}
 		if(tag == "Life")
 		{
@@ -20,7 +20,7 @@ public class Specials : MonoBehaviour {
 		}
 		if(tag == "Shield")
 		{
-
+			gameObject.GetComponent<RedShoot>().ActivateShield();
 		}
 	}
 }

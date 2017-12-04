@@ -111,7 +111,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1650004930482554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -9.04, y: -7.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4103249892456882}
@@ -329,12 +329,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab1: {fileID: 1973316735309928, guid: 875145570b6d256459197ffdccf47168,
     type: 2}
-  laserPrefab2: {fileID: 1973316735309928, guid: 875145570b6d256459197ffdccf47168,
+  laserPrefab2: {fileID: 1993149098620072, guid: 0de534fdcdf91e1498535b802976d259,
     type: 2}
   specialPrefab: {fileID: 1331346215888066, guid: fb2c6846554fa134ea6728df56b713e5,
     type: 2}
   fireDelay: 0.15
   power: 0
+  multipleShootTimer: 1000
   botonDeDisparo1: Fire1
   botonDeDisparo2: Fire2
 --- !u!114 &114524348619122532
