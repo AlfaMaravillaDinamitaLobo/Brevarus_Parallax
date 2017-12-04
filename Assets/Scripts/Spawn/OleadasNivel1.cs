@@ -9,6 +9,10 @@ public class OleadasNivel1 : MonoBehaviour
 	private GameObject enemy4;
 	private GameObject miniboss;
 
+	/*private GameObject shootGreen1;
+	private GameObject shootGreen1;
+	private GameObject shootGreen1;*/
+
 	public OleadasNivel1(GameObject enemy1Prefab, GameObject enemy2Prefab, GameObject enemy3Prefab, GameObject enemy4Prefab, GameObject boss){
 		enemy1 = enemy1Prefab;
 		enemy2 = enemy2Prefab;
@@ -45,11 +49,11 @@ public class OleadasNivel1 : MonoBehaviour
 		Instantiate(enemy2, camera.position + new Vector3(Properties.limitX()-2f,Properties.limitY()-2f,2.9f),flip(camera.rotation));
 		Instantiate(enemy2, camera.position + new Vector3(-Properties.limitX()+2f,Properties.limitY()-2f,2.9f),flip(camera.rotation));
 
-		float addY = 0f;
+		/*float addY = 0f;
 		for (float y = 0f; y < 5f; y += 4) {
 			Instantiate (enemy4, camera.position + new Vector3 (Properties.limitX(), y , 2.9f),camera.rotation);
 			Instantiate (enemy4, camera.position + new Vector3 (-Properties.limitX(), y , 2.9f),camera.rotation);
-		}
+		}*/
 
 		/*Se le suma 2.9 para que los enemigos aparescan por encima de la posicion de la camara, y para que
 			esta sea 0 se le suma 2.9

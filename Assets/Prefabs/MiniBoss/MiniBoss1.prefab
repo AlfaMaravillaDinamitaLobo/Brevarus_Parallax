@@ -24,8 +24,10 @@ GameObject:
   - component: {fileID: 70631345274823446}
   - component: {fileID: 114794859022707614}
   - component: {fileID: 95820351109276386}
-  - component: {fileID: 114513859488304350}
   - component: {fileID: 50479122935871158}
+  - component: {fileID: 114540590649590280}
+  - component: {fileID: 114081090849418720}
+  - component: {fileID: 114933670926591090}
   m_Layer: 9
   m_Name: MiniBoss1
   m_TagString: MiniBoss
@@ -123,7 +125,19 @@ MonoBehaviour:
     type: 2}
   mbossBullet6: {fileID: 1536120628447578, guid: f82a6668e42e0be439eb85bf5d3b08aa,
     type: 2}
---- !u!114 &114513859488304350
+--- !u!114 &114081090849418720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1771039872375382}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905cf80829edf5e4aa048a48a2368978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 1
+--- !u!114 &114540590649590280
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -131,9 +145,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1771039872375382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d47ebe3b25cd594c993c99fa08e215d, type: 3}
+  m_Script: {fileID: 11500000, guid: 79ca78a3c4f6a194a98f7e3ab1c9184d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathPoint: 250
 --- !u!114 &114794859022707614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,7 +161,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 75
+  maxHp: 0
   invulnPeriod: 0.2
+  healthBar: {fileID: 1267961223072532, guid: ff1309cd3496b3349867a2f319789190, type: 2}
+--- !u!114 &114933670926591090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1771039872375382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf5cce0d2468ca4fba0d0eac300acde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timePerMiniboss: 30
 --- !u!212 &212234251022608152
 SpriteRenderer:
   m_ObjectHideFlags: 1

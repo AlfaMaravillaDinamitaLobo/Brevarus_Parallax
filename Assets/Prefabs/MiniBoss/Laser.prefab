@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4742514620289570}
   - component: {fileID: 70080735248417706}
   - component: {fileID: 212676340757121952}
+  - component: {fileID: 114492152307463548}
   m_Layer: 9
   m_Name: mbMid
   m_TagString: Untagged
@@ -38,6 +39,7 @@ GameObject:
   - component: {fileID: 4208485774940830}
   - component: {fileID: 70522035439034404}
   - component: {fileID: 212745892210573816}
+  - component: {fileID: 114886621747638838}
   m_Layer: 9
   m_Name: mbRightLejos
   m_TagString: Untagged
@@ -55,6 +57,7 @@ GameObject:
   - component: {fileID: 4346700505986912}
   - component: {fileID: 212256727018690772}
   - component: {fileID: 70274471235699776}
+  - component: {fileID: 114259662649717408}
   m_Layer: 9
   m_Name: mbLeftCerca
   m_TagString: Untagged
@@ -72,6 +75,7 @@ GameObject:
   - component: {fileID: 4204147811229792}
   - component: {fileID: 212694075634958124}
   - component: {fileID: 70388646352612718}
+  - component: {fileID: 114027388539792590}
   m_Layer: 9
   m_Name: mbLeftLejos
   m_TagString: Untagged
@@ -91,7 +95,7 @@ GameObject:
   - component: {fileID: 114961762839147680}
   m_Layer: 9
   m_Name: Laser
-  m_TagString: Enemy proyectile
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,6 +110,7 @@ GameObject:
   - component: {fileID: 4408776789452298}
   - component: {fileID: 212608576750980020}
   - component: {fileID: 70160471307190572}
+  - component: {fileID: 114440991831975540}
   m_Layer: 9
   m_Name: mbRight
   m_TagString: Untagged
@@ -123,6 +128,7 @@ GameObject:
   - component: {fileID: 4526487201155880}
   - component: {fileID: 70092429542802172}
   - component: {fileID: 212605130118928544}
+  - component: {fileID: 114222417453048842}
   m_Layer: 9
   m_Name: mbRightCerca
   m_TagString: Untagged
@@ -140,6 +146,7 @@ GameObject:
   - component: {fileID: 4179597593635158}
   - component: {fileID: 212755862249086582}
   - component: {fileID: 70515837094751236}
+  - component: {fileID: 114937253627058036}
   m_Layer: 9
   m_Name: mbLeft
   m_TagString: Untagged
@@ -380,6 +387,97 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114027388539792590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1579742776916058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc5e3bfd63d8fe47984f70e23057a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invulnPeriod: 0.1
+  damage: 8
+--- !u!114 &114222417453048842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846859758198310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc5e3bfd63d8fe47984f70e23057a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invulnPeriod: 0.1
+  damage: 8
+--- !u!114 &114259662649717408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523323412419674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc5e3bfd63d8fe47984f70e23057a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invulnPeriod: 0.1
+  damage: 8
+--- !u!114 &114440991831975540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1770403111858306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc5e3bfd63d8fe47984f70e23057a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invulnPeriod: 0.1
+  damage: 8
+--- !u!114 &114492152307463548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062948890826686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc5e3bfd63d8fe47984f70e23057a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invulnPeriod: 0.1
+  damage: 8
+--- !u!114 &114886621747638838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1519080036507948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc5e3bfd63d8fe47984f70e23057a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invulnPeriod: 0.1
+  damage: 8
+--- !u!114 &114937253627058036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1856095738039268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc5e3bfd63d8fe47984f70e23057a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invulnPeriod: 0.1
+  damage: 8
 --- !u!114 &114961762839147680
 MonoBehaviour:
   m_ObjectHideFlags: 1

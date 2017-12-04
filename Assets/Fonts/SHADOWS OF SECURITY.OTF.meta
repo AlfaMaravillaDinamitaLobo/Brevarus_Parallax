@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: ee0e02bc8a397174fa6e6a12bdab89f0
+timeCreated: 1511702947
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Shadows of Security
+  fontNames:
+  - Shadows of Security
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

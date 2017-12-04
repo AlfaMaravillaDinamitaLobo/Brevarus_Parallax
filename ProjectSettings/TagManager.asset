@@ -16,7 +16,7 @@ TagManager:
   - Red
   - Green
   - Boss
-  - MiniBoss
+  - History
   layers:
   - Default
   - TransparentFX
@@ -38,8 +38,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - HistoryScreen
+  - text
   - 
   - 
   - 
@@ -53,4 +53,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Interface
+    uniqueID: 309963233
     locked: 0

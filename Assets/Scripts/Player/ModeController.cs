@@ -14,6 +14,8 @@ public class ModeController : MonoBehaviour {
     private float transitionCounter;
     private float changeCounter;
 
+	public string modeChange = "ModeChange_P1";
+
     void Start()
     {
         parent = this.transform.parent;
@@ -37,7 +39,7 @@ public class ModeController : MonoBehaviour {
 
         if (enabledChange())
         {
-            if (Input.GetKey(KeyCode.Alpha1) && animacion.GetBool("Red") && !animacion.GetBool("Transition"))
+			if (Input.GetButton(modeChange) && animacion.GetBool("Red") && !animacion.GetBool("Transition"))
             {
                 animacion.SetBool("Transition", true);
                 changeCounter = changeTimer;
@@ -46,7 +48,7 @@ public class ModeController : MonoBehaviour {
                 //sound.Play();
             }
 
-            if (Input.GetKey(KeyCode.Alpha1) && animacion.GetBool("Green") && !animacion.GetBool("Transition"))
+			if (Input.GetButton(modeChange) && animacion.GetBool("Green") && !animacion.GetBool("Transition"))
             {
                 animacion.SetBool("Transition", true);
                 changeCounter = changeTimer;

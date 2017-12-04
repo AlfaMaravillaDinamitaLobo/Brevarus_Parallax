@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 114457602913014476}
   - component: {fileID: 114540634823046862}
   - component: {fileID: 114139370868826710}
+  - component: {fileID: 114346704449507144}
+  - component: {fileID: 114866327008558738}
   m_Layer: 9
   m_Name: Enemy 4
   m_TagString: Enemy
@@ -98,6 +100,18 @@ MonoBehaviour:
   bulletPrefab2: {fileID: 1705580485172148, guid: 803574527bd099b4f8ffd3931b5de9fe,
     type: 2}
   fireDelay: 0.9
+--- !u!114 &114346704449507144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1477343783842148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ca78a3c4f6a194a98f7e3ab1c9184d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathPoint: 50
 --- !u!114 &114457602913014476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,8 +138,22 @@ MonoBehaviour:
   deathEffect: {fileID: 1627217014336538, guid: dc551c882c6e5fb47a43b203fb8e5c56,
     type: 2}
   powerUp: {fileID: 1544470936450838, guid: 0bdc5dca88639ad4eb92c803160235e3, type: 2}
+  healthBar: {fileID: 1267961223072532, guid: ff1309cd3496b3349867a2f319789190, type: 2}
   invulnPeriod: 0.1
   health: 20
+  maxHp: 0
+--- !u!114 &114866327008558738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1477343783842148}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905cf80829edf5e4aa048a48a2368978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 1
 --- !u!212 &212871650045783714
 SpriteRenderer:
   m_ObjectHideFlags: 1

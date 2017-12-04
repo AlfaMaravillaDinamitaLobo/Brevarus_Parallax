@@ -3,29 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCollisionDamage : MonoBehaviour {
-
-    public int playerHealth;  
-    public float invulnerabilityTimer;  
-
-    float invulnerabilityCounter = 0;  
-    int correctLayer; 
     
-    public GameObject deathEffect;  
+    public GameObject deathEffect;
+
+	private float maxHealt;
+	private float playerHealth;
+	public float invulnerabilityTimer;
+
+	private bool damaged;
+	private GameObject guiPlayer;
+	private float invulnerabilityCounter = 0;  
+	private int correctLayer;
 
     void Start()
     {
-        correctLayer = gameObject.layer;
+		guiPlayer = GetComponent<GuiPlayer> ().guiPlayer;
+		playerHealth = guiPlayer.GetComponent<StatsPlayer> ().hp;
+		maxHealt = guiPlayer.GetComponent<StatsPlayer> ().maxHp;
+		invulnerabilityTimer = guiPlayer.GetComponent<StatsPlayer>().invulnerabilityTimer;
+
+		correctLayer = gameObject.layer;
+		damaged = false;
     }
 
     void Update()
-    {
-        invulnerabilityCounter -= Time.deltaTime;
-        if (invulnerabilityCounter <= 0)
-        {
-            gameObject.layer = correctLayer;
-        }
+	{
+		invulnerabilityCounter -= Time.deltaTime;
+
+		if (invulnerabilityCounter > 0)
+			damaged = true;
+
+		if (invulnerabilityCounter <= 0) {
+			gameObject.layer = correctLayer;
+			damaged = false;
+		}
+
         if (playerHealth <= 0)
-        {
             Die();
         }
     }
@@ -52,14 +65,18 @@ public class PlayerCollisionDamage : MonoBehaviour {
 
     public void ReceiveDamage(int damage)
     {
-        playerHealth = playerHealth - damage;
-        invulnerabilityCounter = invulnerabilityTimer;
-        gameObject.layer = LayerMask.NameToLayer("Invulnerable");
+		if (!damaged) {
+			guiPlayer.SendMessage ("TakeDamage", damage);
+			playerHealth = playerHealth - damage;
+			invulnerabilityCounter = invulnerabilityTimer;
+			gameObject.layer = LayerMask.NameToLayer ("Invulnerable");
+		}
     }
 
     public void Recover()
     {
-        playerHealth = Mathf.Min(playerHealth + 6, 12);
+		playerHealth = Mathf.Min(playerHealth + 6, maxHealt);
+		guiPlayer.SendMessage ("TakeHealth", 6);
     }
 
     void Die()

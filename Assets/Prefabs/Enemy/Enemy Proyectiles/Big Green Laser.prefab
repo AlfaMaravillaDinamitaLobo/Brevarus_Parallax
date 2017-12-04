@@ -106,6 +106,7 @@ MonoBehaviour:
   health: 1
   invulnPeriod: 0
   effect: {fileID: 1710498715457572, guid: 57aa2dc0aab4ccc4eae14b31eebecd94, type: 2}
+  damage: 1
 --- !u!114 &114401823857569990
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,11 +5,21 @@ using UnityEngine;
 
 public class Enemy2Mov : MonoBehaviour {
 
-	float velocidadMovimiento = 5f;
-	bool llegoAlFinal;
+	private float counter = 0f;
+	private float velocidadMovimiento = 5f;
+	private bool llegoAlFinal;
 
 	// Update is called once per frame
 	void Update () {
+
+		counter += Time.deltaTime;
+		if (counter >= Statics.TimePerWave ()) {
+			GetComponent<FrontMovement> ().enabled = true;
+			GetComponent<FrontMovement> ().maxSpeed = 15f;
+			Destroy (gameObject, 2);
+
+			GetComponent<Enemy2Mov> ().enabled = false;
+		}
 
 		if (llegoAlFinal) {
 			transform.position += Vector3.right * velocidadMovimiento * Time.deltaTime;

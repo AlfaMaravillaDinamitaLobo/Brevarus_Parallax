@@ -6,7 +6,7 @@ public class ShieldController : MonoBehaviour {
 
     private Transform parent;
 
-    private string mode;
+	public string mode;
     
     void Start ()
     {
