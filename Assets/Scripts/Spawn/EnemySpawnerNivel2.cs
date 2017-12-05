@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour {
+public class EnemySpawnerNivel2 : MonoBehaviour {
 
 	public Transform camera;
 
-	public GameObject lvl1Enemy1;
-	public GameObject lvl1Enemy2;
-	public GameObject lvl1Enemy3;
-	public GameObject lvl1Enemy4;
-	public GameObject lvl1Boss;
+	public GameObject lvl2Enemy1;
+	public GameObject lvl2Enemy2;
+	public GameObject lvl2Enemy3;
+	public GameObject lvl2Enemy4;
+	public GameObject lvl2Boss;
 
 	public bool faltaOleada1 = true;
 	public bool faltaOleada2 = true;
@@ -18,14 +18,14 @@ public class EnemySpawner : MonoBehaviour {
 	public bool faltaOleada4 = true;
 	public bool faltaBoss = true;
 
-	private OleadasNivel1 nivel1;
-	private HistoryRelator historyRelator;
+	private OleadasNivel2 nivel2;
+	private HistoryRelatorNivel2 historyRelator;
 	private float timer;
 
 	// Use this for initialization
 	void Start () {
-		historyRelator = GetComponent<HistoryRelator> ();
-		nivel1 = new OleadasNivel1 (lvl1Enemy1,lvl1Enemy2,lvl1Enemy3,lvl1Enemy4,lvl1Boss);
+		historyRelator = GetComponent<HistoryRelatorNivel2> ();
+		nivel2 = new OleadasNivel2 (lvl2Enemy1,lvl2Enemy2,lvl2Enemy3,lvl2Enemy4,lvl2Boss);
 		timer = 0f;
 	}
 	
@@ -34,25 +34,25 @@ public class EnemySpawner : MonoBehaviour {
 		timer += Time.deltaTime;
 
 		if (timer >= 11f && faltaOleada1) {
-			nivel1.primerOleada (camera);
+			nivel2.primerOleada (camera);
 			faltaOleada1 = false;
 			timer = 0;
 		}
 
 		if (faltaOleada2 && !faltaOleada1 && ( EsHoraOleada(18f) || Statics.NoHayEnemigos() )) {
-			nivel1.segundaOleada (camera);
+			nivel2.segundaOleada (camera);
 			faltaOleada2 = false;
 			timer = 0;
 		}
 
 		if (faltaOleada3 && !faltaOleada2 && Statics.NoHayHistorias() && Statics.NoHayEnemigos()) {
-			nivel1.tercerOleada (camera);
+			nivel2.tercerOleada (camera);
 			faltaOleada3 = false;
 			timer = 0;
 		}
 
 		if (historyRelator.alertSpawned && faltaBoss && Statics.NoHayHistorias()) {
-			nivel1.spawnBoss (camera);
+			nivel2.spawnBoss (camera);
 			faltaBoss = false;
 			timer = 0;
 		}
