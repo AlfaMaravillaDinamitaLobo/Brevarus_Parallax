@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dirOrientation: 1
   rotOrientation: 1
-  maxSpeed: 10
+  maxSpeed: 15
 --- !u!212 &212191068509749004
 SpriteRenderer:
   m_ObjectHideFlags: 1

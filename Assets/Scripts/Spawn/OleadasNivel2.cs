@@ -18,9 +18,11 @@ public class OleadasNivel2 : MonoBehaviour
 	}
 
 	public void primerOleada (Transform camera){
-
-		for (int x = 0; x < 10; x++) {
-			Instantiate (enemy1, new Vector3(0f,0f,2.9f),camera.rotation);
+		float initY = Statics.limitY () - 23f;
+		float distance = 3f;
+		for (int y = 0; y < 60; y+=3) {
+			Instantiate (enemy3, new Vector3(distance,initY - y,2.9f),camera.rotation);
+			distance *= -1;
 		}
 
 		/*Se le suma 2.9 para que los enemigos aparescan por encima de la posicion de la camara, y para que
@@ -29,19 +31,12 @@ public class OleadasNivel2 : MonoBehaviour
 	}
 
 	public void segundaOleada (Transform camera){
-		float currentRotation = 0f;
+		float initY = Statics.limitY () + 3f;
+		for (int y = 0; y < 60; y+=3) {
+			Instantiate (enemy4, new Vector3(Random.Range(-Statics.limitX(),Statics.limitY()),initY+y,2.9f),flip(camera.rotation));
+		}
 
-		Instantiate(enemy1, camera.position + new Vector3(0f,						-Properties.limitY() -11f,	2.9f), angleRotation(ref currentRotation));
-		Instantiate(enemy1, camera.position + new Vector3(Properties.limitX() +4f,	-Properties.limitY() -4f,	2.9f), angleRotation(ref currentRotation));
-		Instantiate(enemy1, camera.position + new Vector3(Properties.limitX() +7f,	0,							2.9f), angleRotation(ref currentRotation));
-		Instantiate(enemy1, camera.position + new Vector3(Properties.limitX() +4f,	Properties.limitY() +4f,	2.9f), angleRotation(ref currentRotation));
-		Instantiate(enemy1, camera.position + new Vector3(0f,						Properties.limitY() +11f,	2.9f), angleRotation(ref currentRotation));
-		Instantiate(enemy1, camera.position + new Vector3(-Properties.limitX() -4f,	Properties.limitY() +4f,	2.9f), angleRotation(ref currentRotation));
-		Instantiate(enemy1, camera.position + new Vector3(-Properties.limitX() -7f, 0f,							2.9f), angleRotation(ref currentRotation));
-		Instantiate(enemy1, camera.position + new Vector3(-Properties.limitX() -4f,	-Properties.limitY() -4f,	2.9f), angleRotation(ref currentRotation));
-
-		/*Se le suma 2.9 para que los enemigos aparescan por encima de la posicion de la camara, y para que
-			esta sea 0 se le suma 2.9
+		/*Se le suma 2.9 para que los enemigos aparescan por encima de la posicion de la camara, y para que  esta sea 0 se le suma 2.9
 		*/
 	}
 

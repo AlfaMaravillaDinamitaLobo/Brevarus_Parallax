@@ -26,14 +26,14 @@ public class Enemy5Mov : MonoBehaviour {
 			transform.position = posY;
 		}
 
-		if (counter >= 1.5f) {
+		if (counter >= 1f) {
 			movementTime = false;
 			rotationTime = true;
 			counter = 0f;
 		}
 
 		if (rotationTime && rotationLeft != 0) {
-			iTween.RotateTo(gameObject, iTween.Hash("z", transform.rotation.z + (90 * rotOrientation), "time",1f));
+			iTween.RotateTo(gameObject, iTween.Hash("z", transform.rotation.z + (90 * rotOrientation), "time",2f));
 			rotationLeft--;
 			rotationTime = false;
 			movementTime = true;
@@ -42,6 +42,10 @@ public class Enemy5Mov : MonoBehaviour {
 				rotationLeft = 2;
 				rotOrientation *= -1;
 			}
+		}
+
+		if (Time.time > Statics.TimePerWave() && transform.position.y > Statics.limitY() && transform.position.y > -Statics.limitY()) {
+			Destroy (gameObject);
 		}
 	}
 }
