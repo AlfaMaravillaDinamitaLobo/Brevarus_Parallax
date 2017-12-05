@@ -7,7 +7,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
     public GameObject deathEffect;
 
 	private float maxHealt;
-	private float playerHealth;
+	public float playerHealth;
 	public float invulnerabilityTimer;
 	public int lifes;
 
@@ -54,10 +54,10 @@ public class PlayerCollisionDamage : MonoBehaviour {
 		if (lifes <= 0 && playerHealth <= 0 && !disabled) {
             Die();
         }
-		if (disabled) {
+		if (restartCounter > 0 && disabled) {
 			restartCounter--;
 		}
-		if (restartCounter <= 0) {
+		if (restartCounter <= 0 && disabled) {
 			disabled = false;
 			restartCounter = restartTimer;
 			Revive ();
@@ -107,6 +107,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
 		this.gameObject.GetComponent<PlayerMovement> ().enabled = false;
 		this.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 		this.gameObject.GetComponent<RedShoot> ().enabled = false;
+		this.gameObject.GetComponent<CircleCollider2D> ().enabled = false;
 		this.gameObject.layer = 8;
 		this.gameObject.tag = "Untagged";
 		this.gameObject.GetComponentInChildren<ShieldController> ().enabled = false;
@@ -124,6 +125,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
 		this.gameObject.GetComponent<PlayerMovement> ().enabled = true;
 		this.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 		this.gameObject.GetComponent<RedShoot> ().enabled = true;
+		this.gameObject.GetComponent<CircleCollider2D> ().enabled = true;
 		this.gameObject.layer = 6;
 		this.gameObject.tag = "Player";
 		this.gameObject.GetComponentInChildren<ShieldController> ().enabled = true;

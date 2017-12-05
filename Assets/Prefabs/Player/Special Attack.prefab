@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114447719159969070}
   - component: {fileID: 82343906227191592}
   m_Layer: 11
-  m_Name: Special Red
+  m_Name: Special Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
