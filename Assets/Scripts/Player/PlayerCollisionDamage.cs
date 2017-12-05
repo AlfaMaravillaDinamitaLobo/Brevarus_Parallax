@@ -110,11 +110,11 @@ public class PlayerCollisionDamage : MonoBehaviour {
 		this.gameObject.GetComponent<CircleCollider2D> ().enabled = false;
 		this.gameObject.layer = 8;
 		this.gameObject.tag = "Untagged";
-		this.gameObject.GetComponentInChildren<ShieldController> ().enabled = false;
-		SpriteRenderer[] list = this.gameObject.GetComponentsInChildren<SpriteRenderer> ();
-		foreach (SpriteRenderer renderer in list)
-		{
-			renderer.enabled = false;  
+		for (int i = 0; i < transform.childCount; i++) {
+			var child = transform.GetChild (i).gameObject;
+			if (child != null) {
+				child.SetActive (false);
+			}
 		}
 		disabled = true;
 		restartCounter = restartTimer;
@@ -128,11 +128,11 @@ public class PlayerCollisionDamage : MonoBehaviour {
 		this.gameObject.GetComponent<CircleCollider2D> ().enabled = true;
 		this.gameObject.layer = 6;
 		this.gameObject.tag = "Player";
-		this.gameObject.GetComponentInChildren<ShieldController> ().enabled = true;
-		SpriteRenderer[] list = this.gameObject.GetComponentsInChildren<SpriteRenderer> ();
-		foreach (SpriteRenderer renderer in list)
-		{
-			renderer.enabled = true;  
+		for (int i = 0; i < transform.childCount; i++) {
+			var child = transform.GetChild (i).gameObject;
+			if (child != null) {
+				child.SetActive (true);
+			}
 		}
 		playerHealth = maxHealt;
 		guiPlayer.SendMessage ("TakeHealth", maxHealt);

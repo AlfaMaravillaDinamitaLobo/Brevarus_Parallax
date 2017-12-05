@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114400097532464248}
   - component: {fileID: 82196438822457514}
   m_Layer: 8
-  m_Name: Player Shield
+  m_Name: Player shield
   m_TagString: Player shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
