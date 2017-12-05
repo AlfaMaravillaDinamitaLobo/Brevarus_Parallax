@@ -20,9 +20,6 @@ public class HealthBarEnemy : MonoBehaviour {
 			maxHp = enemy.GetComponent<EnemyCollisionDamage> ().maxHp;
 		if(enemy.tag == "MiniBoss")
 			maxHp = enemy.GetComponent<MiniBossColisionDmg> ().maxHp;
-		Debug.Log ("Hp:" + hp);
-		Debug.Log ("MaxHp:" + maxHp);
-		Debug.Log ("Hp/MaxHp:" + hp / maxHp);
 		health.transform.localScale = new Vector2 (hp / maxHp, 1);
 	}
 }
