@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ShieldController : MonoBehaviour {
 
-    private Transform parent;
+    //private Transform parent;
 
 	public string mode;
     
     void Start ()
     {
-        parent = this.transform.parent;
+        //parent = this.transform.parent;
 
         mode = "Red";
     }

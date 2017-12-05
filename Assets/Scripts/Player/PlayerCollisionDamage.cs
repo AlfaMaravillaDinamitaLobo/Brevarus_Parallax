@@ -18,7 +18,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
 
 	public bool disabled;
 	public float restartTimer;
-	public float restartCounter;
+	private float restartCounter;
 
     void Start()
     {

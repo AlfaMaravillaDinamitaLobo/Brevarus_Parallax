@@ -63,7 +63,6 @@ public class BossCollisionDamage : MonoBehaviour {
 	}
 
 	public void PartDestroyed(){
-		Debug.Log ("Se destruyo una pieza");
 		destroyedParts++;
 	}
 
