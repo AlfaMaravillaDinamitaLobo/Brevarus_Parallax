@@ -1083,10 +1083,11 @@ MonoBehaviour:
     type: 2}
   specialPrefab: {fileID: 1331346215888066, guid: fb2c6846554fa134ea6728df56b713e5,
     type: 2}
-  specialShield: {fileID: 0}
+  specialShield: {fileID: 1083018282374902, guid: c9996a3dd882cc84f8ce7e85c240fe14,
+    type: 2}
   fireDelay: 0.15
   power: 0
-  multipleShootTimer: 0
+  multipleShootTimer: 200
   botonDeDisparo1: Fire1
   botonDeDisparo2: Fire2
   botonDeEscudo: Fire3
@@ -1636,10 +1637,11 @@ MonoBehaviour:
     type: 2}
   specialPrefab: {fileID: 1331346215888066, guid: fb2c6846554fa134ea6728df56b713e5,
     type: 2}
-  specialShield: {fileID: 0}
+  specialShield: {fileID: 1083018282374902, guid: c9996a3dd882cc84f8ce7e85c240fe14,
+    type: 2}
   fireDelay: 0.15
   power: 0
-  multipleShootTimer: 0
+  multipleShootTimer: 200
   botonDeDisparo1: Fire1_P2
   botonDeDisparo2: Fire2_P2
   botonDeEscudo: Fire3
