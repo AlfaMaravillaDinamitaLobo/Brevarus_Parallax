@@ -77,15 +77,17 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -417,6 +419,7 @@ MonoBehaviour:
   maxPower: 100
   score: 0
   invulnerabilityTimer: 0.5
+  lifes: 0
   player: {fileID: 1192708921}
 --- !u!1 &575492373
 GameObject:
@@ -637,7 +640,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4401430540311652, guid: 916226f7a681ae64496f19574907d36e, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 916226f7a681ae64496f19574907d36e, type: 2}
@@ -829,7 +832,7 @@ Transform:
   m_LocalScale: {x: 1.0790786, y: 1.2545006, z: 1.2545006}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &800567258
 GameObject:
@@ -1029,6 +1032,7 @@ MonoBehaviour:
   maxPower: 100
   score: 0
   invulnerabilityTimer: 0.5
+  lifes: 0
   player: {fileID: 1188180126}
 --- !u!1 &1046510345
 GameObject:
@@ -1248,16 +1252,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab487b2788d3d94a95c7aabead6c895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab1: {fileID: 1993149098620072, guid: 0de534fdcdf91e1498535b802976d259,
+  laserPrefab1: {fileID: 1955771218502498, guid: 3ac57bcc47589e24dbd7a023938b0673,
     type: 2}
   laserPrefab2: {fileID: 1993149098620072, guid: 0de534fdcdf91e1498535b802976d259,
     type: 2}
   specialPrefab: {fileID: 1331346215888066, guid: fb2c6846554fa134ea6728df56b713e5,
     type: 2}
-  specialShield: {fileID: 0}
+  specialShield: {fileID: 1083018282374902, guid: c9996a3dd882cc84f8ce7e85c240fe14,
+    type: 2}
   fireDelay: 0.15
   power: 0
-  multipleShootTimer: 0
+  multipleShootTimer: 200
   botonDeDisparo1: Fire1
   botonDeDisparo2: Fire2
   botonDeEscudo: Fire3
@@ -1371,16 +1376,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab487b2788d3d94a95c7aabead6c895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab1: {fileID: 1993149098620072, guid: 0de534fdcdf91e1498535b802976d259,
+  laserPrefab1: {fileID: 1973316735309928, guid: 875145570b6d256459197ffdccf47168,
     type: 2}
   laserPrefab2: {fileID: 1993149098620072, guid: 0de534fdcdf91e1498535b802976d259,
     type: 2}
   specialPrefab: {fileID: 1331346215888066, guid: fb2c6846554fa134ea6728df56b713e5,
     type: 2}
-  specialShield: {fileID: 0}
+  specialShield: {fileID: 1083018282374902, guid: c9996a3dd882cc84f8ce7e85c240fe14,
+    type: 2}
   fireDelay: 0.15
   power: 0
-  multipleShootTimer: 0
+  multipleShootTimer: 200
   botonDeDisparo1: Fire1_P2
   botonDeDisparo2: Fire2_P2
   botonDeEscudo: Fire3
@@ -2816,7 +2822,7 @@ Transform:
   m_LocalScale: {x: 1.0790786, y: 1.2545006, z: 1.2545006}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2082806335
 Prefab:

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollisionDamage : MonoBehaviour {
     
@@ -23,16 +24,16 @@ public class PlayerCollisionDamage : MonoBehaviour {
     void Start()
     {
 		guiPlayer = GetComponent<GuiPlayer> ().guiPlayer;
+		lifes = guiPlayer.GetComponent<StatsPlayer> ().lifes;
 		playerHealth = guiPlayer.GetComponent<StatsPlayer> ().hp;
 		maxHealt = guiPlayer.GetComponent<StatsPlayer> ().maxHp;
 		invulnerabilityTimer = guiPlayer.GetComponent<StatsPlayer>().invulnerabilityTimer;
-		lifes = 3;
 
 		correctLayer = gameObject.layer;
 		damaged = false;
-
 		disabled = false;
 		restartCounter = restartTimer;
+
     }
 
     void Update()
@@ -49,6 +50,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
 
 		if (lifes > 0 && playerHealth <= 0 && !disabled) {
 			Defeat ();
+			guiPlayer.SendMessage ("LooseLife");
 		}
 
 		if (lifes <= 0 && playerHealth <= 0 && !disabled) {
@@ -100,6 +102,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
 
 	public void ExtraLife(){
 		lifes++;
+		guiPlayer.SendMessage ("ExtraLife");
 	}
 
 	public void Defeat(){

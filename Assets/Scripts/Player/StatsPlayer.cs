@@ -9,6 +9,7 @@ public class StatsPlayer : MonoBehaviour {
 	public float power, maxPower;
 	public float score;
 	public float invulnerabilityTimer;
+	public int lifes;
 
 	public GameObject player;
 
@@ -45,5 +46,13 @@ public class StatsPlayer : MonoBehaviour {
 		this.score = this.score + score;
 		Transform scoreGUI = Statics.TransformOfChildByName(gameObject.transform,"Score");
 		scoreGUI.GetComponent<Text>().text = "Score : " + this.score;
+	}
+
+	public void LooseLife(){
+		lifes--;
+	}
+
+	public void ExtraLife(){
+		lifes++;
 	}
 }

@@ -18,7 +18,18 @@ public class HistoryRelatorNivel2 : MonoBehaviour {
 	public GameObject introScreen;
 	public GameObject finalScreen;
 
+	private GameObject gui1;
+	private GameObject gui2;
+
 	void Start(){
+		gui1 = GameObject.Find ("GuiPlayer1");
+		gui2 = GameObject.Find ("GuiPlayer2");
+
+		gui1.GetComponent<StatsPlayer>().score = PlayerPrefs.GetFloat ("Player1Score", 0f);
+		gui2.GetComponent<StatsPlayer>().score = PlayerPrefs.GetFloat ("Player2Score", 0f);
+		gui1.GetComponent<StatsPlayer>().lifes = PlayerPrefs.GetInt ("Player1Lifes", 3);
+		gui2.GetComponent<StatsPlayer>().lifes = PlayerPrefs.GetInt ("Player2Lifes", 3);
+
 		introSpawn = false;
 		finalSpawn = false;
 		history = new HistoryLevel2 ();

@@ -18,6 +18,9 @@ public class HistoryRelator : MonoBehaviour {
 	public GameObject introScreen;
 	public GameObject finalScreen;
 
+	private GameObject gui1;
+	private GameObject gui2;
+
 	void Start(){
 		introSpawn = false;
 		finalSpawn = false;
@@ -69,6 +72,12 @@ public class HistoryRelator : MonoBehaviour {
 
 		if (finalLevel) {
 			GetComponent<AudioSource> ().volume -= Time.deltaTime;
+			gui1 = GameObject.Find ("GuiPlayer1");
+			gui2 = GameObject.Find ("GuiPlayer2");
+			PlayerPrefs.SetInt ("Player1Lifes", gui1.GetComponent<StatsPlayer> ().lifes);
+			PlayerPrefs.SetInt ("Player2Lifes", gui2.GetComponent<StatsPlayer> ().lifes);
+			PlayerPrefs.SetFloat ("Player1Score", gui1.GetComponent<StatsPlayer> ().score);
+			PlayerPrefs.SetFloat ("Player2Score", gui2.GetComponent<StatsPlayer> ().score);
 		}
 	}
 }
