@@ -30,6 +30,10 @@ public class CollisionDamage : MonoBehaviour {
             invulnTimer = invulnPeriod;
             gameObject.layer = 10;
         }
+		if(other.tag == "Player shield" )
+		{
+			Die ();
+		}
     }
 
     void Update()

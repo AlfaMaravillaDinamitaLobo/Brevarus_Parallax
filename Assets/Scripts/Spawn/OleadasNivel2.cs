@@ -64,7 +64,7 @@ public class OleadasNivel2 : MonoBehaviour
 	}
 
 	public void spawnBoss (Transform camera){
-		Instantiate (boss, camera.position + new Vector3 (0, Properties.limitY()-1f, 2.9f),camera.rotation);
+		Instantiate (boss, camera.position + new Vector3 (0, Statics.limitY()+8f, 2.9f),flip(camera.rotation));
 
 		/*Se le suma 2.9 para que los enemigos aparescan por encima de la posicion de la camara, y para que
 			esta sea 0 se le suma 2.9

@@ -62,7 +62,7 @@ public class HistoryRelator : MonoBehaviour {
 		}
 
 		if (!finalSpawn && currentHistory == 3 && Statics.NoHayHistorias()) {
-			Instantiate (introScreen, new Vector2(0f,0f), transform.rotation);
+			Instantiate (finalScreen, new Vector2(0f,0f), transform.rotation);
 			finalLevel = true;
 			introSpawn = true;
 		}

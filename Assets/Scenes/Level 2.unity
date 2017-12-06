@@ -637,7 +637,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4401430540311652, guid: 916226f7a681ae64496f19574907d36e, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 916226f7a681ae64496f19574907d36e, type: 2}
@@ -1254,10 +1254,13 @@ MonoBehaviour:
     type: 2}
   specialPrefab: {fileID: 1331346215888066, guid: fb2c6846554fa134ea6728df56b713e5,
     type: 2}
+  specialShield: {fileID: 0}
   fireDelay: 0.15
   power: 0
+  multipleShootTimer: 0
   botonDeDisparo1: Fire1
   botonDeDisparo2: Fire2
+  botonDeEscudo: Fire3
 --- !u!114 &1188180134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1271,7 +1274,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 1072731098639658, guid: 2fb365177def02c4ca7bf907fde1490c,
     type: 2}
+  playerHealth: 0
   invulnerabilityTimer: 1
+  lifes: 0
+  disabled: 0
+  restartTimer: 0
 --- !u!58 &1188180135
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1370,10 +1377,13 @@ MonoBehaviour:
     type: 2}
   specialPrefab: {fileID: 1331346215888066, guid: fb2c6846554fa134ea6728df56b713e5,
     type: 2}
+  specialShield: {fileID: 0}
   fireDelay: 0.15
   power: 0
+  multipleShootTimer: 0
   botonDeDisparo1: Fire1_P2
   botonDeDisparo2: Fire2_P2
+  botonDeEscudo: Fire3
 --- !u!114 &1192708925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1388,7 +1398,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 1072731098639658, guid: 2fb365177def02c4ca7bf907fde1490c,
     type: 2}
+  playerHealth: 0
   invulnerabilityTimer: 1
+  lifes: 0
+  disabled: 0
+  restartTimer: 0
 --- !u!114 &1192708926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1773,7 +1787,7 @@ MonoBehaviour:
   lvl2Enemy2: {fileID: 1477343783842148, guid: 3bfffc61a2e526d43b2c3b77de357cec, type: 2}
   lvl2Enemy3: {fileID: 1508183018991102, guid: a774c21278591474babb28e979bc4c90, type: 2}
   lvl2Enemy4: {fileID: 1998921844450086, guid: a27032dbd76e26b43a36ec0b7ceacc48, type: 2}
-  lvl2Boss: {fileID: 1771039872375382, guid: e2b30b3bdfe3b4046847ca206e870b38, type: 2}
+  lvl2Boss: {fileID: 1381097765449214, guid: b3cb9a8b0dc96314eac000d570b78ee6, type: 2}
   faltaOleada1: 1
   faltaOleada2: 1
   faltaOleada3: 1
@@ -2949,7 +2963,7 @@ RectTransform:
   - {fileID: 967395834}
   - {fileID: 384625366}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

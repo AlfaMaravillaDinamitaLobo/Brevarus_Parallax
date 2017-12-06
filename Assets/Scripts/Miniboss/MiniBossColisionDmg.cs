@@ -22,14 +22,6 @@ public class MiniBossColisionDmg : MonoBehaviour {
 		maxHp = health;
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.tag == "Player") {
-			ReceiveDamage (5);
-			other.GetComponent<PlayerCollisionDamage>().ReceiveDamage (3);
-		}
-	}
-
 	void Update()
 	{
 		invulnTimer -= Time.deltaTime;
@@ -62,6 +54,9 @@ public class MiniBossColisionDmg : MonoBehaviour {
 			bar.transform.localScale = new Vector3 (1, 1, 1);
 			bar.transform.SetParent (Statics.getUIGameObject());
 		}
+		invulnTimer = invulnPeriod;
+		gameObject.layer = 10;
+		GetComponent<Animator> ().Play("OnHit");
     }
 
 	void Die()

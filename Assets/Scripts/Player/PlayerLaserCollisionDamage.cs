@@ -10,7 +10,7 @@ public class PlayerLaserCollisionDamage : MonoBehaviour
  
     void OnTriggerEnter2D(Collider2D other)
 	{
-		if(other.tag == "Enemy" || other.tag == "Boss")
+		if(other.tag == "Enemy")
         {
 			if (player != null) 
 				player.SendMessage ("AddPower", 2);
@@ -20,11 +20,25 @@ public class PlayerLaserCollisionDamage : MonoBehaviour
 			if (other.tag == "Enemy" && other.GetComponent<EnemyCollisionDamage>().health <= 0f)
 				player.SendMessage ("AddScore", other.GetComponent<StatsEnemy> ().deathPoint);
 
-			if (other.tag == "Boss" && other.GetComponent<MiniBossColisionDmg>().health <= 0f)
+			if (other.tag == "MiniBoss" && other.GetComponent<MiniBossColisionDmg>().health <= 0f)
+				player.SendMessage ("AddScore", other.GetComponent<StatsEnemy> ().deathPoint);
+
+			if (other.tag == "Boss" && other.GetComponent<BossCollisionDamage>().health <= 0f)
 				player.SendMessage ("AddScore", other.GetComponent<StatsEnemy> ().deathPoint);
 
 			Die();
         }
+		if(other.tag == "MiniBoss")
+		{
+			other.GetComponent<MiniBossColisionDmg>().ReceiveDamage(damage);
+			Die();
+		}
+
+		if(other.tag == "Boss")
+		{
+			other.GetComponent<BossCollisionDamage>().ReceiveDamage(damage);
+			Die();
+		}
     }
 
     void Die()

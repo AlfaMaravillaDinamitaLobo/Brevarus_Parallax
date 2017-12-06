@@ -45,7 +45,8 @@ public class Statics{
 	}
 
 	public static bool NoHayEnemigos(){
-		return GameObject.FindGameObjectsWithTag ("Enemy").Length == 0 && GameObject.FindGameObjectsWithTag ("Boss").Length == 0;
+		return GameObject.FindGameObjectsWithTag ("Enemy").Length == 0 && GameObject.FindGameObjectsWithTag ("Boss").Length == 0 
+			&& GameObject.FindGameObjectsWithTag ("MiniBoss").Length == 0;
 	}
 
 	public static bool NoHayHistorias(){

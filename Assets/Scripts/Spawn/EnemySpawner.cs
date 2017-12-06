@@ -56,8 +56,6 @@ public class EnemySpawner : MonoBehaviour {
 			faltaBoss = false;
 			timer = 0;
 		}
-
-		//Debug.Log (Time.time);
 	}
 
 	private bool EsHoraOleada(float time){
