@@ -1278,7 +1278,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Poder
+  m_Text: 'POWER
+
+'
 --- !u!222 &897567140
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1833,7 +1835,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Vida
+  m_Text: 'H P
+
+'
 --- !u!222 &1214255096
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2275,7 +2279,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Poder
+  m_Text: 'POWER
+
+'
 --- !u!222 &1570910876
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2631,7 +2637,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Vida
+  m_Text: 'H P
+
+'
 --- !u!222 &1922742588
 CanvasRenderer:
   m_ObjectHideFlags: 0
