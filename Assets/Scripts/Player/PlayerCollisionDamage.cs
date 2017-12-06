@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollisionDamage : MonoBehaviour {
     
@@ -22,11 +23,12 @@ public class PlayerCollisionDamage : MonoBehaviour {
 
     void Start()
     {
+		Debug.Log (GameObject.FindGameObjectsWithTag ("Player").Length);
 		guiPlayer = GetComponent<GuiPlayer> ().guiPlayer;
 		playerHealth = guiPlayer.GetComponent<StatsPlayer> ().hp;
 		maxHealt = guiPlayer.GetComponent<StatsPlayer> ().maxHp;
 		invulnerabilityTimer = guiPlayer.GetComponent<StatsPlayer>().invulnerabilityTimer;
-		lifes = 3;
+		lifes = guiPlayer.GetComponent<StatsPlayer> ().lifes;
 
 		correctLayer = gameObject.layer;
 		damaged = false;
@@ -62,6 +64,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
 			restartCounter = restartTimer;
 			Revive ();
 		}
+
 
     }
 
@@ -100,6 +103,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
 
 	public void ExtraLife(){
 		lifes++;
+		guiPlayer.SendMessage ("AddLife");
 	}
 
 	public void Defeat(){
@@ -119,6 +123,7 @@ public class PlayerCollisionDamage : MonoBehaviour {
 		disabled = true;
 		restartCounter = restartTimer;
 		lifes--;
+		guiPlayer.SendMessage ("TakeLife");
 	}
 
 	public void Revive(){
@@ -142,5 +147,10 @@ public class PlayerCollisionDamage : MonoBehaviour {
     {
         Instantiate(deathEffect, transform.position, transform.rotation);
         Destroy(gameObject);
+		if (Statics.NoHayPersonajes ()) {
+			SceneManager.LoadScene (0);
+		}
+
     }
+
 }

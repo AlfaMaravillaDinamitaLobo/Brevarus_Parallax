@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HistoryRelator : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class HistoryRelator : MonoBehaviour {
 	private bool introSpawn;
 	private bool finalSpawn;
 	private bool finalLevel;
+	private float timeToNextScene;
 
 	public int currentHistory;
 	public bool alertSpawned;
@@ -61,14 +63,24 @@ public class HistoryRelator : MonoBehaviour {
 			currentHistory++;
 		}
 
+	
+
 		if (!finalSpawn && currentHistory == 3 && Statics.NoHayHistorias()) {
 			Instantiate (finalScreen, new Vector2(0f,0f), transform.rotation);
 			finalLevel = true;
 			introSpawn = true;
+			finalSpawn = true;
+			timeToNextScene = 10f;
 		}
 
 		if (finalLevel) {
 			GetComponent<AudioSource> ().volume -= Time.deltaTime;
+			timeToNextScene -= Time.deltaTime;
+			if (timeToNextScene <= 0) {
+				SceneManager.LoadScene (2);
+			}
 		}
+
+
 	}
 }

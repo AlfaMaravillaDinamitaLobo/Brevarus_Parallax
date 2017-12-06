@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerLaserCollisionDamage : MonoBehaviour
 {
@@ -45,5 +46,8 @@ public class PlayerLaserCollisionDamage : MonoBehaviour
     {
         Instantiate(effect, transform.position, transform.rotation);
         Destroy(gameObject);
+		if (Statics.NoHayPersonajes ()) {
+			SceneManager.LoadScene (0);
+		}
     }
 }

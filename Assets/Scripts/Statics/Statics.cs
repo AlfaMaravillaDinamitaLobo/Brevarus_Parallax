@@ -52,5 +52,9 @@ public class Statics{
 	public static bool NoHayHistorias(){
 		return GameObject.FindGameObjectsWithTag ("History").Length == 0;
 	}
+
+	public static bool NoHayPersonajes(){
+		return GameObject.FindGameObjectsWithTag ("Player").Length == 1;
+	}
 }
 

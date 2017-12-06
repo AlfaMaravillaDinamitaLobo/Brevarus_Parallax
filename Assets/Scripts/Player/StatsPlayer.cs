@@ -9,12 +9,15 @@ public class StatsPlayer : MonoBehaviour {
 	public float power, maxPower;
 	public float score;
 	public float invulnerabilityTimer;
+	public int lifes;
 
 	public GameObject player;
 
 	// Use this for initialization
 	void Start () {
 		score = 0;
+		Transform lifesGUI = Statics.TransformOfChildByName(gameObject.transform,"Lifes");
+		lifesGUI.GetComponent<Text>().text = "Vidas : " + this.lifes;
 	}
 
 	public void TakeDamage(int amount){
@@ -46,4 +49,17 @@ public class StatsPlayer : MonoBehaviour {
 		Transform scoreGUI = Statics.TransformOfChildByName(gameObject.transform,"Score");
 		scoreGUI.GetComponent<Text>().text = "Score : " + this.score;
 	}
+
+	public void TakeLife(){
+		this.lifes = this.lifes - 1;
+		Transform lifesGUI = Statics.TransformOfChildByName(gameObject.transform,"Lifes");
+		lifesGUI.GetComponent<Text>().text = "Vidas : " + this.lifes;
+	}
+
+	public void AddLife(){
+		this.lifes = this.lifes + 1;
+		Transform lifesGUI = Statics.TransformOfChildByName(gameObject.transform,"Lifes");
+		lifesGUI.GetComponent<Text>().text = "Vidas : " + this.lifes;
+	}
+		
 }
