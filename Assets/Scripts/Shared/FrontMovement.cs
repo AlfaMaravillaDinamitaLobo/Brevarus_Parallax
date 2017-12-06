@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FrontMovement : MonoBehaviour {
 
-	public float maxSpeed = 1f;
+	public float maxSpeed = 0.2f;
 
 	// Use this for initialization
 	void Start () {

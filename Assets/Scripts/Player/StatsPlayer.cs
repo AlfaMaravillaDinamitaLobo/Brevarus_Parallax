@@ -13,9 +13,17 @@ public class StatsPlayer : MonoBehaviour {
 
 	public GameObject player;
 
+	void Awake(){
+		Transform lifesUI = Statics.TransformOfChildByName(gameObject.transform,"Lifes");
+		lifesUI.GetComponent<Text>().text = "Lifes : " + 3;
+	}
+
 	// Use this for initialization
 	void Start () {
-		score = 0;
+		if (score == null) {
+			score = 0;
+		}
+
 	}
 
 	public void TakeDamage(int amount){
@@ -48,11 +56,21 @@ public class StatsPlayer : MonoBehaviour {
 		scoreGUI.GetComponent<Text>().text = "Score : " + this.score;
 	}
 
+	public void SetLifes(int lifes){
+		this.lifes = lifes;
+		Transform lifesUI = Statics.TransformOfChildByName(gameObject.transform,"Lifes");
+		lifesUI.GetComponent<Text>().text = "Lifes : " + this.lifes;
+	}
+
 	public void LooseLife(){
 		lifes--;
+		Transform lifesUI = Statics.TransformOfChildByName(gameObject.transform,"Lifes");
+		lifesUI.GetComponent<Text>().text = "Lifes : " + this.lifes;
 	}
 
 	public void ExtraLife(){
 		lifes++;
+		Transform lifesUI = Statics.TransformOfChildByName(gameObject.transform,"Lifes");
+		lifesUI.GetComponent<Text>().text = "Lifes : " + this.lifes;
 	}
 }

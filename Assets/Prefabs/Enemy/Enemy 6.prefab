@@ -105,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 1072731098639658, guid: 2fb365177def02c4ca7bf907fde1490c,
     type: 2}
-  powerUp: {fileID: 1432128366966228, guid: fc558b7d252a48f47a823c9c22fa1d0c, type: 2}
+  powerUp: {fileID: 1651468672807288, guid: 642ea5e49faa47443b2efd854e3470bf, type: 2}
   healthBar: {fileID: 1267961223072532, guid: ff1309cd3496b3349867a2f319789190, type: 2}
   invulnPeriod: 0.1
   health: 3

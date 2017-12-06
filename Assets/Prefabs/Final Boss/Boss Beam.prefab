@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ff85146b8ac6c541965542230c25dfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 1200
   invulnPeriod: 0
   effect: {fileID: 1710498715457572, guid: 57aa2dc0aab4ccc4eae14b31eebecd94, type: 2}
   damage: 50

@@ -917,8 +917,10 @@ MonoBehaviour:
   deathEffect: {fileID: 1504395736090156, guid: cd5cbae01724546459f8ce9f3379d271,
     type: 2}
   invulnPeriod: 0.2
-  health: 10
+  health: 70
+  maxHp: 0
   isBody: 0
+  healthBar: {fileID: 1267961223072532, guid: ff1309cd3496b3349867a2f319789190, type: 2}
 --- !u!114 &114119901054320724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -933,8 +935,10 @@ MonoBehaviour:
   deathEffect: {fileID: 1504395736090156, guid: cd5cbae01724546459f8ce9f3379d271,
     type: 2}
   invulnPeriod: 0.2
-  health: 10
+  health: 30
+  maxHp: 0
   isBody: 0
+  healthBar: {fileID: 1267961223072532, guid: ff1309cd3496b3349867a2f319789190, type: 2}
 --- !u!114 &114159489330574410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -949,8 +953,10 @@ MonoBehaviour:
   deathEffect: {fileID: 1504395736090156, guid: cd5cbae01724546459f8ce9f3379d271,
     type: 2}
   invulnPeriod: 0.2
-  health: 10
+  health: 30
+  maxHp: 0
   isBody: 0
+  healthBar: {fileID: 1267961223072532, guid: ff1309cd3496b3349867a2f319789190, type: 2}
 --- !u!114 &114163827633704110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1032,8 +1038,10 @@ MonoBehaviour:
   deathEffect: {fileID: 1504395736090156, guid: cd5cbae01724546459f8ce9f3379d271,
     type: 2}
   invulnPeriod: 0.2
-  health: 10
+  health: 30
+  maxHp: 0
   isBody: 0
+  healthBar: {fileID: 1267961223072532, guid: ff1309cd3496b3349867a2f319789190, type: 2}
 --- !u!114 &114282833661286298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1048,8 +1056,10 @@ MonoBehaviour:
   deathEffect: {fileID: 1504395736090156, guid: cd5cbae01724546459f8ce9f3379d271,
     type: 2}
   invulnPeriod: 0.2
-  health: 10
+  health: 30
+  maxHp: 0
   isBody: 0
+  healthBar: {fileID: 1267961223072532, guid: ff1309cd3496b3349867a2f319789190, type: 2}
 --- !u!114 &114369461334917482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1141,7 +1151,9 @@ MonoBehaviour:
     type: 2}
   invulnPeriod: 0.2
   health: 100
+  maxHp: 0
   isBody: 1
+  healthBar: {fileID: 1267961223072532, guid: ff1309cd3496b3349867a2f319789190, type: 2}
 --- !u!114 &114651810785235770
 MonoBehaviour:
   m_ObjectHideFlags: 1

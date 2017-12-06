@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour {
 
@@ -21,6 +22,9 @@ public class EnemySpawner : MonoBehaviour {
 	private OleadasNivel1 nivel1;
 	private HistoryRelator historyRelator;
 	private float timer;
+
+	private bool checkEnding;
+	private GameObject boss;
 
 	// Use this for initialization
 	void Start () {
@@ -56,9 +60,12 @@ public class EnemySpawner : MonoBehaviour {
 			faltaBoss = false;
 			timer = 0;
 		}
+
 	}
 
 	private bool EsHoraOleada(float time){
 		return timer >= time;
 	}
+
+
 }

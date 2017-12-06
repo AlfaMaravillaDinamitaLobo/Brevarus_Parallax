@@ -10,6 +10,7 @@ public class BossCollisionDamage : MonoBehaviour {
 	float invulnTimer;
 	int correctLayer;
 	public int health;
+	public int maxHp;
 
 	private SpriteRenderer sprite;
 	private int colorTimer;
@@ -19,6 +20,8 @@ public class BossCollisionDamage : MonoBehaviour {
 	private int destroyedParts;
 	private bool canReceiveDamage;
 
+	public GameObject healthBar;
+
 	void Start()
 	{
 		correctLayer = gameObject.layer;
@@ -27,6 +30,7 @@ public class BossCollisionDamage : MonoBehaviour {
 		colorTimer = 7;
 		destroyedParts = 0;
 		canReceiveDamage = false;
+		maxHp = health;
 	}
 
 	void Update()
@@ -58,6 +62,14 @@ public class BossCollisionDamage : MonoBehaviour {
 			colorCounter = colorTimer;
 			invulnTimer = invulnPeriod;
 			gameObject.layer = 10;
+
+			healthBar.GetComponent<EnemySetter>().SetEnemy(gameObject);
+
+			GameObject bar= Instantiate(healthBar, 
+				new Vector3(640f,-23.6f,Statics.UIProperties().getZPositionEnemyBar()),
+				Quaternion.Euler(0,0,0));
+			bar.transform.localScale = new Vector3 (1, 1, 1);
+			bar.transform.SetParent (Statics.getUIGameObject());
 		}
 
 	}

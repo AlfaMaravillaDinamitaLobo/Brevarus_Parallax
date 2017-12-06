@@ -85,7 +85,7 @@ public class OleadasNivel1 : MonoBehaviour
 
 	public void spawnBoss (Transform camera)
 	{
-		/*GameObject enemy = */Instantiate (miniboss, camera.position + new Vector3 (0, Properties.limitY()-1f, 2.9f),camera.rotation);
+		Instantiate (miniboss, camera.position + new Vector3 (0, Properties.limitY()-1f, 2.9f),camera.rotation);
 
 		//enemy.GetComponent<Enemy2Mov> ().enabled = false;
 		//enemy.GetComponent<Rigidbody2D>().AddForce (Vector2.down * 15.0f, ForceMode2D.Impulse);
