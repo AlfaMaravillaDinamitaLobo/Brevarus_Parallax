@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114642990966118372}
   - component: {fileID: 58667037496016672}
   - component: {fileID: 114317995844068232}
+  - component: {fileID: 114222978564463674}
   m_Layer: 9
   m_Name: Enemy 6
   m_TagString: Enemy
@@ -80,6 +81,17 @@ CircleCollider2D:
   m_Offset: {x: -0.0000019073486, y: 0.45721054}
   serializedVersion: 2
   m_Radius: 1.4587116
+--- !u!114 &114222978564463674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1998921844450086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 851b0e0a93c49ca41b7f2dfb15170924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114225041789859426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,7 +108,7 @@ MonoBehaviour:
   powerUp: {fileID: 1432128366966228, guid: fc558b7d252a48f47a823c9c22fa1d0c, type: 2}
   healthBar: {fileID: 1267961223072532, guid: ff1309cd3496b3349867a2f319789190, type: 2}
   invulnPeriod: 0.1
-  health: 5
+  health: 3
   maxHp: 0
 --- !u!114 &114317995844068232
 MonoBehaviour:
@@ -109,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905cf80829edf5e4aa048a48a2368978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 15
+  maxSpeed: 30
 --- !u!114 &114642990966118372
 MonoBehaviour:
   m_ObjectHideFlags: 1

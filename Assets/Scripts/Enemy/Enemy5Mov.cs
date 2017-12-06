@@ -10,6 +10,7 @@ public class Enemy5Mov : MonoBehaviour {
 	private int rotationLeft = 1;
 
 	private float counter = 0f;
+	private float lifeCounter = 0f;
 	public float maxSpeed = 20f;
 
 	private bool movementTime = true;
@@ -17,6 +18,7 @@ public class Enemy5Mov : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		lifeCounter += Time.deltaTime;
 
 		if (movementTime) {
 			counter += Time.deltaTime;
@@ -44,7 +46,7 @@ public class Enemy5Mov : MonoBehaviour {
 			}
 		}
 
-		if (Time.time > Statics.TimePerWave() && transform.position.y > Statics.limitY() && transform.position.y > -Statics.limitY()) {
+		if (lifeCounter > Statics.TimePerWave() && (transform.position.y > Statics.limitY() +3 || transform.position.y < (Statics.limitY()+3f) * (-1f))) {
 			Destroy (gameObject);
 		}
 	}

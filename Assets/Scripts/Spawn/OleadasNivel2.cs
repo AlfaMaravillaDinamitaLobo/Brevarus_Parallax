@@ -14,7 +14,7 @@ public class OleadasNivel2 : MonoBehaviour
 		enemy2 = enemy2Prefab;
 		enemy3 = enemy3Prefab;
 		enemy4 = enemy4Prefab;
-		boss = boss;
+		this.boss = boss;
 	}
 
 	public void primerOleada (Transform camera){
@@ -32,7 +32,7 @@ public class OleadasNivel2 : MonoBehaviour
 
 	public void segundaOleada (Transform camera){
 		float initY = Statics.limitY () + 3f;
-		for (int y = 0; y < 60; y+=3) {
+		for (int y = 0; y < 330; y+=3) {
 			Instantiate (enemy4, new Vector3(Random.Range(-Statics.limitX(),Statics.limitY()),initY+y,2.9f),flip(camera.rotation));
 		}
 
@@ -40,22 +40,31 @@ public class OleadasNivel2 : MonoBehaviour
 		*/
 	}
 
-	private Quaternion angleRotation(ref float currentRotation){
-		Quaternion angle = Quaternion.Euler (0f, 0f, currentRotation);
-		currentRotation += 45;
-
-		return angle;
-	}
-
 	public void tercerOleada (Transform camera){
-		Instantiate(enemy2, camera.position + new Vector3(Properties.limitX()-2f,Properties.limitY()-2f,2.9f),flip(camera.rotation));
-		Instantiate(enemy2, camera.position + new Vector3(-Properties.limitX()+2f,Properties.limitY()-2f,2.9f),flip(camera.rotation));
+		Instantiate(enemy1, camera.position + new Vector3(Properties.limitX()-2f,Properties.limitY()-2f,2.9f),flip(camera.rotation));
+		Instantiate(enemy1, camera.position + new Vector3(-Properties.limitX()+2f,Properties.limitY()-2f,2.9f),flip(camera.rotation));
 
 		float addY = 0f;
 		for (float y = 0f; y < 5f; y += 4) {
-			Instantiate (enemy4, camera.position + new Vector3 (Properties.limitX(), y , 2.9f),camera.rotation);
-			Instantiate (enemy4, camera.position + new Vector3 (-Properties.limitX(), y , 2.9f),camera.rotation);
+			Instantiate (enemy2, camera.position + new Vector3 (Properties.limitX(), y , 2.9f),camera.rotation);
+			Instantiate (enemy2, camera.position + new Vector3 (-Properties.limitX(), y , 2.9f),camera.rotation);
 		}
+
+		/*Se le suma 2.9 para que los enemigos aparescan por encima de la posicion de la camara, y para que
+			esta sea 0 se le suma 2.9
+		*/
+	}
+
+	public void cuartaOleada (Transform camera){
+		primerOleada (camera);
+		segundaOleada (camera);
+
+		/*Se le suma 2.9 para que los enemigos aparescan por encima de la posicion de la camara, y para que  esta sea 0 se le suma 2.9
+		*/
+	}
+
+	public void spawnBoss (Transform camera){
+		Instantiate (boss, camera.position + new Vector3 (0, Properties.limitY()-1f, 2.9f),camera.rotation);
 
 		/*Se le suma 2.9 para que los enemigos aparescan por encima de la posicion de la camara, y para que
 			esta sea 0 se le suma 2.9
@@ -64,15 +73,6 @@ public class OleadasNivel2 : MonoBehaviour
 
 	private Quaternion flip(Quaternion rotation){
 		return rotation * Quaternion.Euler (0f, 0f, 180f);
-	}
-
-	public void spawnBoss (Transform camera)
-	{
-		Instantiate (boss, camera.position + new Vector3 (0, Properties.limitY()-1f, 2.9f),camera.rotation);
-
-		/*Se le suma 2.9 para que los enemigos aparescan por encima de la posicion de la camara, y para que
-			esta sea 0 se le suma 2.9
-		*/
 	}
 }
 

@@ -39,15 +39,21 @@ public class EnemySpawnerNivel2 : MonoBehaviour {
 			timer = 0;
 		}
 
-		if (faltaOleada2 && !faltaOleada1 && ( EsHoraOleada(18f) || Statics.NoHayEnemigos() )) {
+		if (faltaOleada2 && !faltaOleada1 && ( EsHoraOleada(Statics.TimePerWave()) || Statics.NoHayEnemigos() )) {
 			nivel2.segundaOleada (camera);
 			faltaOleada2 = false;
 			timer = 0;
 		}
 
-		if (faltaOleada3 && !faltaOleada2 && Statics.NoHayHistorias() && Statics.NoHayEnemigos()) {
+		if (faltaOleada3 && !faltaOleada2 && Statics.NoHayHistorias() && historyRelator.currentHistory == 2) {
 			nivel2.tercerOleada (camera);
 			faltaOleada3 = false;
+			timer = 0;
+		}
+
+		if (faltaOleada4 && !faltaOleada3 && ( EsHoraOleada(Statics.TimePerWave()) || Statics.NoHayEnemigos() )) {
+			nivel2.cuartaOleada (camera);
+			faltaOleada4 = false;
 			timer = 0;
 		}
 

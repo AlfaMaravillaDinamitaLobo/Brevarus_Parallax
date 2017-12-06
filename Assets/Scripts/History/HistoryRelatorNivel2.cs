@@ -48,7 +48,7 @@ public class HistoryRelatorNivel2 : MonoBehaviour {
 			currentHistory++;
 		}
 
-		if (!enemySpawner.faltaOleada3 && Statics.NoHayEnemigos() && !alertSpawned) {
+		if (!enemySpawner.faltaOleada4 && Statics.NoHayEnemigos() && !alertSpawned) {
 			Instantiate (alert, new Vector2 (0f,0f), Quaternion.Euler(new Vector3(0f,0f,30f)));
 
 			alertSpawned = true;
@@ -62,7 +62,7 @@ public class HistoryRelatorNivel2 : MonoBehaviour {
 		}
 
 		if (!finalSpawn && currentHistory == 3 && Statics.NoHayHistorias()) {
-			Instantiate (introScreen, new Vector2(0f,0f), transform.rotation);
+			Instantiate (finalScreen, new Vector2(0f,0f), transform.rotation);
 			finalLevel = true;
 			introSpawn = true;
 		}
