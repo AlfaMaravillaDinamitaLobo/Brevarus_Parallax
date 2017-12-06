@@ -1895,6 +1895,7 @@ MonoBehaviour:
     type: 2}
   finalScreen: {fileID: 1520399628425512, guid: 3a765197c661b17478d55e93862915a3,
     type: 2}
+  bossMusic: {fileID: 8300000, guid: fde4997e28a4a594096f999086e5e48d, type: 3}
   gui1: {fileID: 967395833}
   gui2: {fileID: 384625365}
   player1: {fileID: 1188180126}

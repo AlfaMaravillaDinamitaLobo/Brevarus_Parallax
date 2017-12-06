@@ -10,14 +10,17 @@ public class HistoryRelatorNivel2 : MonoBehaviour {
 	private bool introSpawn;
 	private bool finalSpawn;
 	private bool finalLevel;
+	private bool musicPlaying;
 
 	public int currentHistory;
+	private float counter;
 	public bool alertSpawned;
 
 	public GameObject historyPrefab;
 	public GameObject alert;
 	public GameObject introScreen;
 	public GameObject finalScreen;
+	public AudioClip bossMusic;
 
 	public GameObject gui1;
 	public GameObject gui2;
@@ -38,12 +41,14 @@ public class HistoryRelatorNivel2 : MonoBehaviour {
 	}
 
 	void Start(){
+		musicPlaying = false;
 		introSpawn = false;
 		finalSpawn = false;
 		history = new HistoryLevel2 ();
 		enemySpawner = GetComponent<EnemySpawnerNivel2> ();
 		alertSpawned = false;
 		currentHistory = 0;
+		counter = 0;
 
 		jumpLevel = 0;
 	}
@@ -73,6 +78,21 @@ public class HistoryRelatorNivel2 : MonoBehaviour {
 			Instantiate (alert, new Vector2 (0f,0f), Quaternion.Euler(new Vector3(0f,0f,30f)));
 
 			alertSpawned = true;
+		}
+
+		if (alertSpawned && counter <= 3f) {
+			GetComponent<AudioSource> ().volume -= Time.deltaTime;
+		}
+
+		if (!enemySpawner.faltaBoss && !musicPlaying) {
+			GetComponent<AudioSource> ().clip = bossMusic;
+			GetComponent<AudioSource> ().volume = 1;
+			GetComponent<AudioSource> ().Play();
+			musicPlaying = true;
+		}
+
+		if (alertSpawned) {
+			counter += Time.deltaTime;
 		}
 
 		if (!enemySpawner.faltaBoss && Statics.NoHayEnemigos() && currentHistory == 2) {
